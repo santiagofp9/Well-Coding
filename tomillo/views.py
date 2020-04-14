@@ -17,5 +17,7 @@ from django.views.generic.edit import CreateView,FormView
 class Inicio(TemplateView):
     template_name = 'index.html'
 
+class Single(TemplateView):
+    template_name = 'tomillo/single.html'
 
 

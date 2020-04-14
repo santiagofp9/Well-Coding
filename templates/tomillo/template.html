@@ -52,8 +52,8 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="single.html">About Us</a></li>
+                                <li class="active"><a href="{% url 'tomillo:inicio' %}">Home</a></li>
+                                <li><a href="{% url 'tomillo:single'  %}">About Us</a></li>
                                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <i class="fa fa-chevron-down"></i></a>
                                     <div class="dropdown-menu" style="margin-left: -203.625px;">
                                         <div class="dropdown-inner">
@@ -195,9 +195,6 @@
 					<li><a href="#">Google +</a></li>
 					<li><a href="#">Pinterest</a></li>
 				</ul>
-				<div class="copyright">
-					<span>Copyright © 20xx - Designed by <a href="https://www.Zerotheme.com" target="_blank">Zerotheme</a></span>
-				</div>
 			</div> 
 		</div>
 	</footer>
