@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,189 +33,167 @@
         <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
-
-<body id="page-top" class="index-page">
-    <div class="wrap-body">
-    
-        <!--////////////////////////////////////Header-->
-        <header>
-            <!---Main Header--->
-            <div class="main-header">
-            
-                <!--Navigation-->
-                <nav id="menu" class="navbar">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-                            <a class="navbar-brand" href="#">
-                                <img src="{% static 'images/logo.png' %}" width="250px"/>
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active"><a href="{% url 'tomillo:inicio' %}">Home</a></li>
-                                <li><a href="{% url 'tomillo:single'  %}">About Us</a></li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <i class="fa fa-chevron-down"></i></a>
-                                    <div class="dropdown-menu" style="margin-left: -203.625px;">
-                                        <div class="dropdown-inner">
-                                            <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 301</a></li>
-                                                <li><a href="archive.html">Text 302</a></li>
-                                                <li><a href="archive.html">Text 303</a></li>
-                                                <li><a href="archive.html">Text 304</a></li>
-                                                <li><a href="archive.html">Text 305</a></li>
-                                            </ul>
-                                            <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 306</a></li>
-                                                <li><a href="archive.html">Text 307</a></li>
-                                                <li><a href="archive.html">Text 308</a></li>
-                                                <li><a href="archive.html">Text 309</a></li>
-                                                <li><a href="archive.html">Text 310</a></li>
-                                            </ul>
-                                            <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 311</a></li>
-                                                <li><a href="archive.html">Text 312</a></li>
-                                                <li><a href="archive.html#">Text 313</a></li>
-                                                <li><a href="archive.html#">Text 314</a></li>
-                                                <li><a href="archive.html">Text 315</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="archive.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                
-                <!-- Static Header -->
-                <div class="header-text">
-                    <div class="header-text-inner">
-                        <h1>We Love Design</h1>
-                        <p>Lorem ipsum dolor sit amet adipisicing</p>
-                    </div>
-                </div><!-- /header-text -->
-                <!---Scroller--->
-                <div id="scroll-page-content">
-                    <a href="#page-content" class="scroller">
-                        <div class="scroller-button">
-                            <i class="fa fa-angle-down"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </header>
-
-{% block content %}
-
-
-{% endblock content %}
-
-	<!--////////////////////////////////////Footer-->
-	<footer id="footer">
-		<div class="container">
-			<div class="wrap-footer">
-				<div class="row">
-					<div class="col-md-7">
-						<div class="footer-contact-form">
-							<h2 class="footer-title">Leave A Message</h2>
-							<form name="" method="post" action="contact.php">
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
-										</div>
-										<div class="form-group">
-											<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
+<body id="page-top" class="sub-page">
+	<div class="wrap-body">
+	
+		<!--////////////////////////////////////Header-->
+		<header>
+			<!---Main Header--->
+			<div class="main-header">
+			
+				<!--Navigation-->
+				<nav id="menu" class="navbar">
+					<div class="container-fluid">
+						<div class="navbar-header">
+						  <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+							<a class="navbar-brand" href="{% url 'tomillo:inicio' %}">
+								<img src="{% static 'images/logo.png' %}" width="250px"/>
+							</a>
+						</div>
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							<ul class="nav navbar-nav">
+								<li><a href="{% url 'tomillo:inicio' %}">Home</a></li>
+								<li class="active"><a href="{% url 'tomillo:single'  %}">About Us</a></li>
+								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <i class="fa fa-chevron-down"></i></a>
+									<div class="dropdown-menu" style="margin-left: -203.625px;">
+										<div class="dropdown-inner">
+											<ul class="list-unstyled">
+												<li><a href="archive.html">Text 301</a></li>
+												<li><a href="archive.html">Text 302</a></li>
+												<li><a href="archive.html">Text 303</a></li>
+												<li><a href="archive.html">Text 304</a></li>
+												<li><a href="archive.html">Text 305</a></li>
+											</ul>
+											<ul class="list-unstyled">
+												<li><a href="archive.html">Text 306</a></li>
+												<li><a href="archive.html">Text 307</a></li>
+												<li><a href="archive.html">Text 308</a></li>
+												<li><a href="archive.html">Text 309</a></li>
+												<li><a href="archive.html">Text 310</a></li>
+											</ul>
+											<ul class="list-unstyled">
+												<li><a href="archive.html">Text 311</a></li>
+												<li><a href="archive.html">Text 312</a></li>
+												<li><a href="archive.html#">Text 313</a></li>
+												<li><a href="archive.html#">Text 314</a></li>
+												<li><a href="archive.html">Text 315</a></li>
+											</ul>
 										</div>
 									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required" placeholder="Message" style="height: 190px;"></textarea>
-										</div>						
-									</div>
-								</div>
-								<button type="submit" class="btn btn-skin" name="submitcontact" id="submitcontact">Submit</button>
-							</form>
+								</li>
+								<li><a href="{% url 'tomillo:blog' %}">Blog</a></li>
+								<li><a href="{% url 'tomillo:contact' %}">Contact</a></li>
+							</ul>
 						</div>
 					</div>
-					<div class="col-md-5">
-						<div class="footer-contact-info">
-							<div class="contact-info-item">
-								<div class="row">
-									<div class="col-md-1">
-										<div class="contact-info-icon">
-											<i class="fa fa-map-marker"></i>
-										</div>
+				</nav>
+
+{% block content %}
+				
+{% endblock content %}
+
+<!--////////////////////////////////////Footer-->
+<footer id="footer">
+	<div class="container">
+		<div class="wrap-footer">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="footer-contact-form">
+						<h2 class="footer-title">Leave A Message</h2>
+						<form name="" method="post" action="contact.php">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input type="text" class="form-control input-lg" name="name" id="name" placeholder="Enter name" required="required" />
 									</div>
-									<div class="col-md-10">
-										<h3>Location</h3>
-										<p>California, United States 3000009</p>
+									<div class="form-group">
+										<input type="email" class="form-control input-lg" name="email" id="email" placeholder="Enter email" required="required" />
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control input-lg" name="subject" id="subject" placeholder="Subject" required="required" />
 									</div>
 								</div>
-							</div>
-							<div class="contact-info-item">
-								<div class="row">
-									<div class="col-md-1">
-										<div class="contact-info-icon">
-											<i class="fa fa-phone"></i>
-										</div>
-									</div>
-									<div class="col-md-10">
-										<h3>Toll Free call</h3>
-										<p> +6221 888 888 90 , +6221 888 88891</p>
-									</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required" placeholder="Message" style="height: 190px;"></textarea>
+									</div>						
 								</div>
 							</div>
-							<div class="contact-info-item">
-								<div class="row">
-									<div class="col-md-1">
-										<div class="contact-info-icon">
-											<i class="fa fa-envelope"></i>
-										</div>
+							<button type="submit" class="btn btn-skin" name="submitcontact" id="submitcontact">Submit</button>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<div class="footer-contact-info">
+						<div class="contact-info-item">
+							<div class="row">
+								<div class="col-md-1">
+									<div class="contact-info-icon">
+										<i class="fa fa-map-marker"></i>
 									</div>
-									<div class="col-md-10">
-										<h3>Email</h3>
-										<p> info@yourdomain.com</p>
+								</div>
+								<div class="col-md-10">
+									<h3>Location</h3>
+									<p>California, United States 3000009</p>
+								</div>
+							</div>
+						</div>
+						<div class="contact-info-item">
+							<div class="row">
+								<div class="col-md-1">
+									<div class="contact-info-icon">
+										<i class="fa fa-phone"></i>
 									</div>
+								</div>
+								<div class="col-md-10">
+									<h3>Toll Free call</h3>
+									<p> +6221 888 888 90 , +6221 888 88891</p>
+								</div>
+							</div>
+						</div>
+						<div class="contact-info-item">
+							<div class="row">
+								<div class="col-md-1">
+									<div class="contact-info-icon">
+										<i class="fa fa-envelope"></i>
+									</div>
+								</div>
+								<div class="col-md-10">
+									<h3>Email</h3>
+									<p> info@yourdomain.com</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="bottom-footer">
-				<ul class="list-inline footer-link link">
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Instagram</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Google +</a></li>
-					<li><a href="#">Pinterest</a></li>
-				</ul>
-			</div> 
 		</div>
-	</footer>
-	<!-- Footer -->
-	<div id="page-top"><a href="#page-top" class="btn btn-toTop"><i class="fa fa-angle-double-up"></i></a></div>
-	
-	<!-- ========== Scripts ========== -->
-	<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
-	<script src="{% static 'js/bootstrap.min.js' %}"></script>
-	<script src="{% static 'js/jquery.localScroll.min.js' %}"></script>
-	<script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
-	<script src="{% static 'js/SmoothScroll.js' %}"></script>
-	<script src="{% static 'js/wow.min.js' %}"></script>
-	
-	<!-- Owl Carousel JS -->
-	<script src="{% static 'owl-carousel/owl.carousel.js' %}"></script>
-	
-	<!-- Definity JS -->
-	<script src="{% static 'js/main.js' %}"></script>
-	
-</div>
+		<div class="bottom-footer">
+			<ul class="list-inline footer-link link">
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Instagram</a></li>
+				<li><a href="#">Twitter</a></li>
+				<li><a href="#">Google +</a></li>
+				<li><a href="#">Pinterest</a></li>
+			</ul>
+		</div> 
+	</div>
+</footer>
+<!-- Footer -->
+<div id="page-top"><a href="#page-top" class="btn btn-toTop"><i class="fa fa-angle-double-up"></i></a></div>
+
+<!-- JS -->
+<!-- ========== Scripts ========== -->
+<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.localScroll.min.js' %}"></script>
+<script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'js/SmoothScroll.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+
+<!-- Definity JS -->
+<script src="{% static 'js/main.js' %}"></script>
+
+</div>	
 </body>
 </html>

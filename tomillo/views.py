@@ -20,4 +20,10 @@ class Inicio(TemplateView):
 class Single(TemplateView):
     template_name = 'tomillo/single.html'
 
+class Blog(TemplateView):
+    template_name = 'tomillo/archive.html'
+
+class Contact(TemplateView):
+    template_name = 'tomillo/contact.html'
+
 
