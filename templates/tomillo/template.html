@@ -53,10 +53,10 @@
 						<div class="collapse navbar-collapse navbar-ex1-collapse">
 							<ul class="nav navbar-nav">
 								<li><a href="{% url 'tomillo:inicio' %}">Home</a></li>
-								<li class="active"><a href="{% url 'tomillo:about_us'  %}">About Us</a></li>
-								<li><a href="{% url 'tomillo:partners'  %}">Partners</a></li>
+								<li id="au"><a href="{% url 'tomillo:about_us'  %}">About Us</a></li>
+								<li id="par"><a href="{% url 'tomillo:partners'  %}">Partners</a></li>
 								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <i class="fa fa-chevron-down"></i></a>
-									<div class="dropdown-menu" style="margin-left: -203.625px;">
+									<div class="dropdown-menu">
 										<div class="dropdown-inner">
 											<ul class="list-unstyled">
 												<li><a href="{% url 'tomillo:f5' %}">Tomillo F5</a></li>
@@ -67,9 +67,9 @@
 										</div>
 									</div>
 								</li>
-								<li><a href="{% url 'tomillo:resources' %}">Resources</a></li>
-								<li><a href="{% url 'tomillo:alumni' %}">Alumni</a></li>
-								<li><a href="{% url 'tomillo:contact' %}">Contact</a></li>
+								<li id="res"><a href="{% url 'tomillo:resources' %}">Resources</a></li>
+								<li id="alum"><a href="{% url 'tomillo:alumni' %}">Alumni</a></li>
+								<li id="cont"><a href="{% url 'tomillo:contact' %}">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -85,9 +85,9 @@
 		<div class="wrap-footer">
 			<div class="row">
 				<div class="col-md-7">
-					<div class="footer-contact-form">
+				<div class="footer-contact-form">
 						<h2 class="footer-title">Leave A Message</h2>
-						<form name="" method="post" action="contact.php">
+						<form name="" method="post" action="">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
