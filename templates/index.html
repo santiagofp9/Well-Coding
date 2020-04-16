@@ -54,34 +54,22 @@
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="{% url 'tomillo:inicio' %}">Home</a></li>
-                                <li><a href="{% url 'tomillo:single'  %}">About Us</a></li>
-                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Category <i class="fa fa-chevron-down"></i></a>
+								<li><a href="{% url 'tomillo:about_us'  %}">About Us</a></li>
+								<li><a href="{% url 'tomillo:partners'  %}">Partners</a></li>
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <i class="fa fa-chevron-down"></i></a>
                                     <div class="dropdown-menu" style="margin-left: -203.625px;">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 301</a></li>
-                                                <li><a href="archive.html">Text 302</a></li>
-                                                <li><a href="archive.html">Text 303</a></li>
-                                                <li><a href="archive.html">Text 304</a></li>
-                                                <li><a href="archive.html">Text 305</a></li>
-                                            </ul>
-                                            <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 306</a></li>
-                                                <li><a href="archive.html">Text 307</a></li>
-                                                <li><a href="archive.html">Text 308</a></li>
-                                                <li><a href="archive.html">Text 309</a></li>
-                                                <li><a href="archive.html">Text 310</a></li>
-                                            </ul>
-                                            <ul class="list-unstyled">
-                                                <li><a href="archive.html">Text 311</a></li>
-                                                <li><a href="archive.html">Text 312</a></li>
-                                                <li><a href="archive.html#">Text 313</a></li>
-                                                <li><a href="archive.html#">Text 314</a></li>
-                                                <li><a href="archive.html">Text 315</a></li>
+                                                <li><a href="{% url 'tomillo:f5' %}">Tomillo F5</a></li>
+                                                <li><a href="{% url 'tomillo:cybersecurity' %}">Cybersecurity</a></li>
+                                                <li><a href="{% url 'tomillo:formal_education' %}">Formal Education</a></li>
+                                                <li><a href="{% url 'tomillo:non_formal_education' %}">Non-Formal Education</a></li>
                                             </ul>
                                         </div>
                                     </div>
-                                </li>
+								</li>
+								<li><a href="{% url 'tomillo:resources' %}">Resources</a></li>
+								<li><a href="{% url 'tomillo:alumni' %}">Alumni</a></li>
                                 <li><a href="{% url 'tomillo:blog' %}">Blog</a></li>
                                 <li><a href="{% url 'tomillo:contact' %}">Contact</a></li>
                             </ul>
@@ -400,10 +388,10 @@
 							<div class="box-item">
 								<img src="{% static 'images/10.jpg' %}" class="img-responsive"/>
 								<div class="content">
-									<h3><a href="{% url 'tomillo:single'  %}">Planning Our Honeymoon</a></h3>
+									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
 									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
 									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:single'  %}">Read More</a>
+									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -411,10 +399,10 @@
 							<div class="box-item">
 								<img src="{% static 'images/11.jpg' %}" class="img-responsive"/>
 								<div class="content">
-									<h3><a href="{% url 'tomillo:single'  %}">Brainstorming Wedding Ideas</a></h3>
+									<h3><a href="{% url 'tomillo:about_us'  %}">Brainstorming Wedding Ideas</a></h3>
 									<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
 									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:single'  %}">Read More</a>
+									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -422,10 +410,10 @@
 							<div class="box-item">
 								<img src="{% static 'images/12.jpg' %}" class="img-responsive"/>
 								<div class="content">
-									<h3><a href="{% url 'tomillo:single'  %}">Planning Our Honeymoon</a></h3>
+									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
 									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
 									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:single'  %}">Read More</a>
+									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -433,10 +421,10 @@
 							<div class="box-item">
 								<img src="{% static 'images/13.jpg' %}" class="img-responsive"/>
 								<div class="content">
-									<h3><a href="{% url 'tomillo:single'  %}">Planning Our Honeymoon</a></h3>
+									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
 									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
 									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:single'  %}">Read More</a>
+									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
 								</div>
 							</div>
 						</div>
@@ -558,11 +546,12 @@
 		</div>
 		<div class="bottom-footer">
 			<ul class="list-inline footer-link link">
+				<li><a href="#">LinkedIn</a></li>
 				<li><a href="#">Facebook</a></li>
 				<li><a href="#">Instagram</a></li>
 				<li><a href="#">Twitter</a></li>
-				<li><a href="#">Google +</a></li>
-				<li><a href="#">Pinterest</a></li>
+				<li><a href="{% url 'tomillo:press'  %}">Press</a></li>
+				<li><a href="{% url 'tomillo:legal'  %}">Legal</a></li>
 			</ul>
 		</div> 
 	</div>
