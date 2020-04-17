@@ -54,6 +54,10 @@ input:not([type]), input[type="color"], input[type="email"], input[type="number"
     border: 1px solid #777;
 }
 
+.ocult li{display: none;}
+
+li:hover > .ocult li{display: block;}
+
 .center{text-align: center; margin: 0 auto;}
 .f-right{float: right;}
 .f-left{float: left;}

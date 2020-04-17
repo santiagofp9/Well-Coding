@@ -60,9 +60,28 @@
                                     <div class="dropdown-menu">
                                         <div class="dropdown-inner">
                                             <ul class="list-unstyled">
-                                                <li><a href="{% url 'tomillo:f5' %}">Tomillo F5</a></li>
+												<li class="dropup"><a href="{% url 'tomillo:f5' %}" class="dropdown-toggle" data-toggle="dropdown">Tomillo F5  <i class="fa fa-chevron-right"></i></a>
+													<div class="dropdown-menu" style="margin-left: 185px; margin-bottom: -41px;">
+														<div class="dropdown-inner">
+															<ul class="list-unstyled">
+																<li><a href="{% url 'tomillo:promo2020' %}">Graduation 2020</a></li>
+															</ul>
+														</div>
+													</div>
+												</li>
                                                 <li><a href="{% url 'tomillo:cybersecurity' %}">Cybersecurity</a></li>
-                                                <li><a href="{% url 'tomillo:formal_education' %}">Formal Education</a></li>
+                                                <li class="dropup"><a href="{% url 'tomillo:formal_education' %}" class="dropdown-toggle" data-toggle="dropdown">Formal Education  <i class="fa fa-chevron-right"></i></a>
+													<div class="dropdown-menu"  style="margin-left: 185px; margin-bottom: -240px;">
+														<div class="dropdown-inner">
+															<ul class="list-unstyled">
+																<li><a href="{% url 'tomillo:ele_eco' %}">Electricity and Electronics</a></li>
+																<li><a href="{% url 'tomillo:computing' %}">Computing and Communication</a></li>
+																<li><a href="{% url 'tomillo:adm' %}">Administration</a></li>
+																<li><a href="{% url 'tomillo:networks' %}">Micro-computing and Networks</a></li>
+															</ul>
+														</div>
+													</div>
+												</li>
                                                 <li><a href="{% url 'tomillo:non_formal_education' %}">Non-Formal Education</a></li>
                                             </ul>
                                         </div>
