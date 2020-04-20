@@ -89,13 +89,12 @@
 		$(window).resize(function(){
 			var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 			var footerHeight = $('#footer').outerHeight();
-			$('#page-content').css({'marginBottom': '500px'});
-			/*if (width >= '768') { 
+			if (width >= '768') { 
 				$('#page-content').css({'marginBottom': footerHeight + 'px'});
 			}else{
 				$('#page-content').css({'marginBottom': '0px'});
-			}*/
-		});
+			}
+				});
 		$(window).resize();
 	}
 	

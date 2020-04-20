@@ -32,11 +32,26 @@ class Contact(TemplateView):
 class TomilloF5(TemplateView):
     template_name = 'tomillo/f5.html'
 
+class Promo2020(TemplateView):
+    template_name = 'tomillo/promo2020.html'
+
 class Cybersecurity(TemplateView):
     template_name = 'tomillo/cyber.html'
 
 class FormalEducation(TemplateView):
     template_name = 'tomillo/formalEducation.html'
+
+class EleEco(TemplateView):
+    template_name = 'tomillo/ele_eco.html'
+
+class Adm(TemplateView):
+    template_name = 'tomillo/adm.html'
+
+class Computing(TemplateView):
+    template_name = 'tomillo/computing.html'
+
+class Networks(TemplateView):
+    template_name = 'tomillo/networks.html'
 
 class NonFormalEducation(TemplateView):
     template_name = 'tomillo/nonformalEducation.html'
@@ -52,5 +67,6 @@ class Press(TemplateView):
 
 class Legal(TemplateView):
     template_name = 'tomillo/legal.html'
+
 
 

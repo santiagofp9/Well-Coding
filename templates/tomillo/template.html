@@ -47,7 +47,7 @@
 						<div class="navbar-header">
 						  <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
 							<a class="navbar-brand" href="{% url 'tomillo:inicio' %}">
-								<img src="{% static 'images/logotech.png' %}" width="190px"/>
+								<img src="{% static 'images/logotech.png' %}" width="200px"/>
 							</a>
 						</div>
 						<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -55,13 +55,24 @@
 								<li><a href="{% url 'tomillo:inicio' %}">Home</a></li>
 								<li id="au"><a href="{% url 'tomillo:about_us'  %}">About Us</a></li>
 								<li id="par"><a href="{% url 'tomillo:partners'  %}">Partners</a></li>
-								<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <i class="fa fa-chevron-down"></i></a>
+								<li id="tra" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <i class="fa fa-chevron-down"></i></a>
 									<div class="dropdown-menu">
 										<div class="dropdown-inner">
 											<ul class="list-unstyled">
-												<li><a href="{% url 'tomillo:f5' %}">Tomillo F5</a></li>
+												<li class="dropdown-submenu"><a href="{% url 'tomillo:f5' %}" class="dropdown-toggle" data-toggle="dropdown">Tomillo F5  <i class="fa fa-chevron-right"></i></a>
+													<ul class="dropdown-menu ocult">
+														<li><a href="{% url 'tomillo:promo2020' %}">Graduation 2020</a></li>
+													</ul>
+												</li>
 												<li><a href="{% url 'tomillo:cybersecurity' %}">Cybersecurity</a></li>
-												<li><a href="{% url 'tomillo:formal_education' %}">Formal Education</a></li>
+												<li class="dropdown-submenu"><a href="{% url 'tomillo:formal_education' %}" class="dropdown-toggle" data-toggle="dropdown">Formal Education  <i class="fa fa-chevron-right"></i></a>
+													<ul class="dropdown-menu ocult">
+														<li><a href="{% url 'tomillo:ele_eco' %}">Electricity and Electronics</a></li>
+														<li><a href="{% url 'tomillo:computing' %}">Computing and Communication</a></li>
+														<li><a href="{% url 'tomillo:adm' %}">Administration</a></li>
+														<li><a href="{% url 'tomillo:networks' %}">Micro-computing and Networks</a></li>
+													</ul>													
+												</li>
 												<li><a href="{% url 'tomillo:non_formal_education' %}">Non-Formal Education</a></li>
 											</ul>
 										</div>
@@ -74,6 +85,7 @@
 						</div>
 					</div>
 				</nav>
+				
 
 {% block content %}
 				
