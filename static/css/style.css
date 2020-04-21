@@ -154,12 +154,12 @@ body.sub-page .header-text{padding-left: 10%;margin-top: 12vh;}
 .dropdown-submenu .dropdown-menu {
     top: 0;
     left: 100%;
-    margin-left: .1rem;
-    margin-right: .1rem;
+    /*margin-left: .1rem;
+    margin-right: .1rem;*/
 }
 
 .ocult li{display: none;}
-ul.dropdown-menu.ocult{padding: 0;}
+ul.dropdown-menu.ocult{padding: 0; margin-top: -5px;} 
 li:hover > .ocult li{display: block;}
 
 @media  (min-width: 768px) {
