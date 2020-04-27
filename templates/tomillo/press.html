@@ -1,8 +1,10 @@
 {% extends 'tomillo/template.html' %}
 {% load static %}
+
 {% block content %}
-			
-			<!-- Static Header -->
+
+
+	<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
 					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Press</p>
@@ -22,74 +24,33 @@
 					<div class="col-md-8 col-md-offset-2">
 						<!-----------------Content-------------------->
 						<article>
+
+							{% for press in prensa %}
 							<div class="wrap-post"><!--Start Box-->
 								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
+									
+										<h2 class="text-uppercase font-weight-bold text-center"><a href="single.html">{{press.titulo}}</a></h2>
+									
+											<span class="entry-meta">
+												<ul class="list-inline link">
+													<li><a href="#">{{press.fecha}}</a></li>
+												</ul>
+											</span>
 								</div>
 								<div class="post-thumbnail-wrap">
 									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/11.jpg' %}" class="img-responsive" alt="">
+										<img src="../../static/{{press.imagen}}" class="img-responsive" alt="#">
 									</div>
 								</div>
 								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
-									<a class="btn btn-skin" href="single.html">Read More</a>
+									<p> {{press.descripcion}} </p> 
+									<a class="btn btn-skin" href="{{press.link}}">Read More</a>
 								</div>
 							</div>
+							{% endfor %}
+
 						</article>
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/12.jpg' %}" class="img-responsive" alt="">
-									</div>
-								</div>
-								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
-									<a class="btn btn-skin" href="single.html">Read More</a>
-								</div>
-							</div>
-						</article>
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/13.jpg' %}" class="img-responsive" alt="">
-									</div>
-								</div>
-								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
-									<a class="btn btn-skin" href="single.html">Read More</a>
-								</div>
-							</div>
-						</article>
+						
 					</div>
 				</div>
 			</div>
@@ -97,4 +58,10 @@
 		
 	</div>
 
-{% endblock content %}
+{% endblock content %}	
+
+ 
+
+
+
+

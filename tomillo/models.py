@@ -118,12 +118,17 @@ class Publicacion(models.Model):
 class Prensa(models.Model):
 	fecha = models.DateField()
 	link = models.URLField(max_length=500)
-	medio = models.CharField(max_length=50)
-
+	#medio = models.CharField(max_length=50)
+	titulo = models.CharField(max_length=100)
+	descripcion = models.CharField(max_length=300)
+	imagen = models.ImageField(upload_to = 'static/iemeges/', default = 'pic_folder/None/partner-3.png')
+    
 	class Meta:
 		verbose_name = 'Prensa'
 		verbose_name_plural = 'Prensa links'
 
 	def __str__(self):
 
-		return str(self.nombre)
+		return str(self.titulo) + " " + str(self.descripcion) 
+
+

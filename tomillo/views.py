@@ -61,12 +61,17 @@ class Resources(TemplateView):
     
 class Alumnis(TemplateView):
     template_name = 'tomillo/alumni.html'
-
-class Press(TemplateView):
-    template_name = 'tomillo/press.html'
-
+    
 class Legal(TemplateView):
     template_name = 'tomillo/legal.html'
 
+
+class Press(ListView):
+    model = Prensa
+    template_name = 'tomillo/press.html'
+    context_object_name = 'prensa'
+    queryset = Prensa.objects.all()
+
+   
 
 

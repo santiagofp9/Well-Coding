@@ -22,4 +22,5 @@ urlpatterns = [
     path('alumni/', Alumnis.as_view(), name = 'alumni'),
     path('press/', Press.as_view(), name = 'press'),
     path('legal/', Legal.as_view(), name = 'legal'),
+
   ]
