@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import *
 
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, FormView
+from django.views.generic import TemplateView, FormView, ListView
 
 from django.contrib.auth.models import User
 
@@ -91,7 +91,6 @@ class Alumnis(TemplateView):
     
 class Legal(TemplateView):
     template_name = 'tomillo/legal.html'
-<<<<<<< HEAD
 
 
 class Press(ListView):
@@ -102,6 +101,3 @@ class Press(ListView):
 
    
 
-
-=======
->>>>>>> master
