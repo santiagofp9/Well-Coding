@@ -24,6 +24,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tomillo/', include(('tomillo.urls', 'tomillo'))),
+    path('', Inicio.as_view(), name = 'inicio'),
     
 
 ]
