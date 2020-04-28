@@ -1,17 +1,15 @@
-
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .models import *
 
-
-
-
 from django.urls import reverse_lazy
-from django.views.generic import View, TemplateView, ListView, UpdateView, CreateView, DeleteView
-from django.http import HttpResponseRedirect
-from django.contrib.auth import login,logout
+from django.views.generic import TemplateView, FormView
+
 from django.contrib.auth.models import User
-#from .forms import UserForm,FormularioLogin,CestaForm,UserCreationForm
-from django.views.generic.edit import CreateView,FormView
+
+from .forms import ContactForm
+
+from django.core.mail import EmailMessage
+from django.template.loader import get_template
 
 
 class Inicio(TemplateView):
@@ -26,9 +24,38 @@ class Partners(TemplateView):
 class Blog(TemplateView):
     template_name = 'tomillo/archive.html'
 
-class Contact(TemplateView):
+class ContactUs(FormView):
+    form_class = ContactForm
+    success_url = reverse_lazy('tomillo:contact')
     template_name = 'tomillo/contact.html'
+    
 
+    def form_valid(self, form):
+        contact_name = form.cleaned_data['contact_name']
+        contact_email = form.cleaned_data['contact_email']
+        subject = form.cleaned_data['subject']
+        message = form.cleaned_data['message']
+
+        template = get_template('tomillo/content_template.txt')
+        context = {
+            'contact_name': contact_name,
+            'contact_email': contact_email,
+            'subject': subject,
+            'message': message,
+        }
+
+        content = template.render(context)
+
+        email = EmailMessage(
+            'New contact form submission',
+            content,
+            'Your website ' + '',
+            ['youremail@gmail.com'],
+            headers = {'Reply-To': contact_email}
+        )
+        email.send()
+        return super(ContactUs, self).form_valid(form)
+            
 class TomilloF5(TemplateView):
     template_name = 'tomillo/f5.html'
 
@@ -64,6 +91,7 @@ class Alumnis(TemplateView):
     
 class Legal(TemplateView):
     template_name = 'tomillo/legal.html'
+<<<<<<< HEAD
 
 
 class Press(ListView):
@@ -75,3 +103,5 @@ class Press(ListView):
    
 
 
+=======
+>>>>>>> master
