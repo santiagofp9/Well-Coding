@@ -133,9 +133,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/iemeges')
 MEDIA_URL = '/iemeges/'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-"""DEFAULT_FROM_EMAIL = 'testing@example.com'
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-EMAIL_PORT = 1025"""
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp-gotech.alwaysdata.net'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gotech@alwaysdata.net'
+EMAIL_HOST_PASSWORD = 'tomillo.f5'

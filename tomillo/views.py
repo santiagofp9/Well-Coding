@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from .forms import ContactForm
 from django.core.mail import send_mail
 from django.http import HttpResponse
+from final.settings import EMAIL_HOST_USER
 
 class Inicio(TemplateView):
     template_name = 'index.html'
@@ -24,11 +25,11 @@ def contact_us(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             # send email code goes here
-            # contact_name = form.cleaned_data['contact_name']
+            contact_name = form.cleaned_data['contact_name']
             contact_email = form.cleaned_data['contact_email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            send_mail(subject, message, contact_email, ['alyona.saenco@gmail.com'])
+            send_mail(subject, message, EMAIL_HOST_USER, ['alyona.saenco@gmail.com'], fail_silently = False)
             return HttpResponse('Thanks for contacting us!')
     else:
         form = ContactForm()
