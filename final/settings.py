@@ -25,7 +25,7 @@ SECRET_KEY = '@4b=tk_rryd6insle6peg(&%g(je6lx*hnv87v)%tn0!c6mmid'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['gotech.alwaysdata.net']
+ALLOWED_HOSTS = ['gotech.alwaysdata.net','127.0.0.1']
 
 
 # Application definition
