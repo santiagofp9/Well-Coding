@@ -1,16 +1,11 @@
 from django.shortcuts import render, redirect
 from .models import *
-
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, FormView, ListView
-
 from django.contrib.auth.models import User
-
 from .forms import ContactForm
-
-from django.core.mail import EmailMessage
-from django.template.loader import get_template
-
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 class Inicio(TemplateView):
     template_name = 'index.html'
@@ -24,12 +19,27 @@ class Partners(TemplateView):
 class Blog(TemplateView):
     template_name = 'tomillo/archive.html'
 
-class ContactUs(FormView):
+def contact_us(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # send email code goes here
+            # contact_name = form.cleaned_data['contact_name']
+            contact_email = form.cleaned_data['contact_email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            send_mail(subject, message, contact_email, ['alyona.saenco@gmail.com'])
+            return HttpResponse('Thanks for contacting us!')
+    else:
+        form = ContactForm()
+
+    return render(request, 'tomillo/contact.html', {'form': form})
+
+"""class ContactUs(FormView):
     form_class = ContactForm
     success_url = reverse_lazy('tomillo:contact')
     template_name = 'tomillo/contact.html'
     
-
     def form_valid(self, form):
         contact_name = form.cleaned_data['contact_name']
         contact_email = form.cleaned_data['contact_email']
@@ -50,11 +60,11 @@ class ContactUs(FormView):
             'New contact form submission',
             content,
             'Your website ' + '',
-            ['youremail@gmail.com'],
+            ['alyona.saenco@gmail.com'],
             headers = {'Reply-To': contact_email}
         )
         email.send()
-        return super(ContactUs, self).form_valid(form)
+        return super(ContactUs, self).form_valid(form)"""
             
 class TomilloF5(TemplateView):
     template_name = 'tomillo/f5.html'

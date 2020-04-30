@@ -25,7 +25,7 @@ SECRET_KEY = '@4b=tk_rryd6insle6peg(&%g(je6lx*hnv87v)%tn0!c6mmid'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['gotech.alwaysdata.net']
+ALLOWED_HOSTS = ['gotech.alwaysdata.net', '127.0.0.1']
 
 
 # Application definition
@@ -134,8 +134,8 @@ MEDIA_URL = '/iemeges/'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'testing@example.com'
+"""DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
-EMAIL_PORT = 1025
+EMAIL_PORT = 1025"""
