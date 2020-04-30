@@ -104,6 +104,7 @@ class Legal(TemplateView):
 
 
 class Press(ListView):
+    paginate_by = 3
     model = Prensa
     template_name = 'tomillo/press.html'
     context_object_name = 'prensa'
