@@ -16,11 +16,10 @@ urlpatterns = [
     path('adm/', Adm.as_view(), name = 'adm'),
     path('computing/', Computing.as_view(), name = 'computing'),
     path('networks/', Networks.as_view(), name = 'networks'),
-    path('non_formal_education/', NonFormalEducation.as_view(), name = 'non_formal_education'),
     path('resources/', Resources.as_view(), name = 'resources'),
     path('alumni/', Alumnis.as_view(), name = 'alumni'),
     path('press/', Press.as_view(), name = 'press'),
     path('legal/', Legal.as_view(), name = 'legal'),
-    path('contact/', views.contact_us, name='contact'),
+    path('contact/', ContactUs.as_view(), name='contact'),
 
   ]

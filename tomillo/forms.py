@@ -1,5 +1,5 @@
 from django import forms
-from django.forms import TextInput
+from django.forms import TextInput, EmailInput
 
 class ContactForm(forms.Form):
     contact_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Your name'}), required=True)
