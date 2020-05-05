@@ -6,8 +6,18 @@ from django.contrib.auth.models import User
 from .forms import ContactForm
 from django.core.mail import send_mail
 
-class Inicio(TemplateView):
+class Inicio(FormView):
+    form_class = ContactForm
     template_name = 'index.html'
+    success_url = reverse_lazy('inicio')
+
+    def form_valid(self, form):
+        contact_name = form.cleaned_data['contact_name']
+        contact_email = form.cleaned_data['contact_email']
+        subject = form.cleaned_data['subject']
+        message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
+        send_mail(subject, message, contact_email, ['alyona.saenco@gmail.com'], fail_silently = False)
+        return super(Inicio, self).form_valid(form)
 
 class AboutUs(TemplateView):
     template_name = 'tomillo/aboutUs.html'
@@ -30,6 +40,19 @@ class ContactUs(FormView):
         message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
         send_mail(subject, message, contact_email, ['alyona.saenco@gmail.com'], fail_silently = False)
         return super(ContactUs, self).form_valid(form)
+
+class ContactUsFooter(FormView):
+    form_class = ContactForm
+    success_url = reverse_lazy('tomillo:inicio')
+    template_name = 'tomillo/template.html'
+    
+    def form_valid(self, form):
+        contact_name = form.cleaned_data['contact_name']
+        contact_email = form.cleaned_data['contact_email']
+        subject = form.cleaned_data['subject']
+        message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
+        send_mail(subject, message, contact_email, ['alyona.saenco@gmail.com'], fail_silently = False)
+        return super(ContactUsFooter, self).form_valid(form)
             
 class TomilloF5(TemplateView):
     template_name = 'tomillo/f5.html'

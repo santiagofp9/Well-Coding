@@ -341,10 +341,11 @@ footer .link li:last-child:after{content:'';padding:0px;display:none}
 footer ul.link li{padding: 0;margin: 0;}
 
 footer .footer-contact-form{}
-footer .footer-contact-form .form-control{margin-bottom: 25px;}
-footer .footer-contact-form input.form-control,
+footer .footer-contact-form input{margin-bottom: 25px;}
+footer .footer-contact-form input,
 footer .footer-contact-form textarea{background: transparent;border: 1px solid #666;}
-footer .footer-contact-form input.form-control:focus,
+footer .footer-contact-form textarea{height: 190px;}
+footer .footer-contact-form input:focus,
 footer .footer-contact-form textarea:focus{box-shadow: none;border: 1px solid #e9e9e9;}
 footer .footer-contact-form .btn-skin{}
 
