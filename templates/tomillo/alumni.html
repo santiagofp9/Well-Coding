@@ -37,25 +37,28 @@
 								</div>
 							</div>
 						</article>
-
-						<div class="row">
-							{% for a in alumni %}
-							<div class="col-md-4 text-center animate-box">
-								<div class="product">
-									<div class="product-grid" style="background-image:url('{{ a.foto.url }}');">
-										<div class="inner">
-											<p>
-												<!-- Aquí va el link al CV, ya sea abriendo otra pestaña o descargando -->
-												<a href="{% url 'tomillo:contact' a.id %}" class="icon"><i class="icon-eye"></i></a>
-											</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							{% endfor %}
-						</div>
 					</div>
 				</div>
+
+				<div class="row">
+					{% for a in alumni %}
+					<div class="col-md-4 text-center animate-box">
+						<div class="product">
+							<img src="../../static/{{ a.foto }}" class="img-responsive" alt="">
+							<div class="product-grid" style="background-image:url(' ../../static/{{ a.foto.url }}');">
+								<div class="inner">
+									<p>
+										<!-- Aquí va el link al CV, ya sea abriendo otra pestaña o descargando -->
+										<a href="{% url 'tomillo:contact' %}" class="icon"><i class="icon-eye"></i></a>
+										El url es {{ a.foto.url }}
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				
 			</div>
 		</div>
 		
