@@ -126,6 +126,7 @@ class Prensa(models.Model):
 	class Meta:
 		verbose_name = 'Prensa'
 		verbose_name_plural = 'Prensa links'
+		ordering = ["-fecha"] 
 
 	def __str__(self):
 
