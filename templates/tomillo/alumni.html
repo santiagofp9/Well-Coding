@@ -25,13 +25,7 @@
 							<div class="wrap-post"><!--Start Box-->
 								<div class="entry-header">
 									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
+									
 								</div>
 								<div class="post-thumbnail-wrap">
 									<div class="portfolio-box zoom-effect">
@@ -39,57 +33,27 @@
 									</div>
 								</div>
 								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
 									<a class="btn btn-skin" href="single.html">Read More</a>
 								</div>
 							</div>
 						</article>
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/12.jpg' %}" class="img-responsive" alt="">
+
+						<div class="row">
+							{% for a in alumni %}
+							<div class="col-md-4 text-center animate-box">
+								<div class="product">
+									<div class="product-grid" style="background-image:url('{{ a.foto.url }}');">
+										<div class="inner">
+											<p>
+												<!-- Aquí va el link al CV, ya sea abriendo otra pestaña o descargando -->
+												<a href="{% url 'tomillo:contact' a.id %}" class="icon"><i class="icon-eye"></i></a>
+											</p>
+										</div>
 									</div>
 								</div>
-								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
-									<a class="btn btn-skin" href="single.html">Read More</a>
-								</div>
 							</div>
-						</article>
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									<span class="entry-meta">
-										<ul class="list-inline link">
-											<li>By <a href="#">BUSINESS</a></li>
-											<li><a href="#">August, 22 2016</a></li>
-											<li><a href="#">0 comments</a></li>
-										</ul>
-									</span>
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/13.jpg' %}" class="img-responsive" alt="">
-									</div>
-								</div>
-								<div class="entry-content">
-									<p>Figgis is a member of this unique, new wave of young underground artists bringing painting back to circulation this year. Quite honestly, we’re almost sure that this group’s art is the antidote to process-led abstraction that took serious hold in 2014. At 42 years old, Figgis is not a complete newbie though, but with her…</p>
-									<a class="btn btn-skin" href="single.html">Read More</a>
-								</div>
-							</div>
-						</article>
+							{% endfor %}
+						</div>
 					</div>
 				</div>
 			</div>

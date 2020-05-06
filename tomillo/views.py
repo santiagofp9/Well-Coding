@@ -81,8 +81,11 @@ class Networks(TemplateView):
 class Resources(TemplateView):
     template_name = 'tomillo/resources.html'
     
-class Alumnis(TemplateView):
+class Alumnis(ListView):
+    model = Alumni
     template_name = 'tomillo/alumni.html'
+    context_object_name = 'alumni'
+    queryset = Alumni.objects.all()
     
 class Legal(TemplateView):
     template_name = 'tomillo/legal.html'
