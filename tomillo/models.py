@@ -122,7 +122,7 @@ class Prensa(models.Model):
 	link = models.URLField(max_length=500)
 	titulo = models.CharField(max_length=100,blank=True, null=True)
 	descripcion = models.CharField(max_length=300,blank=True, null=True)
-	imagen = models.ImageField(upload_to = 'static/iemeges/', default = 'pic_folder/None/partner-3.png')
+	imagen = models.ImageField(upload_to = 'prensa/', default = 'pic_folder/None/partner-3.png')
 	order = models.IntegerField(blank=True, null=True)
 	body = models.TextField(blank=True, null=True)
 	slug = models.SlugField(default='', blank=True)
