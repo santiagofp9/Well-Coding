@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -115,21 +116,27 @@ class Publicacion(models.Model):
 
 		return str(self.titulo) + " " + str(self.fecha) 
 
+
 class Prensa(models.Model):
-	fecha = models.DateField()
+	fecha = models.DateField(blank=True, null=True)
 	link = models.URLField(max_length=500)
-	#medio = models.CharField(max_length=50)
-	titulo = models.CharField(max_length=100)
-	descripcion = models.CharField(max_length=300)
+	titulo = models.CharField(max_length=100,blank=True, null=True)
+	descripcion = models.CharField(max_length=300,blank=True, null=True)
 	imagen = models.ImageField(upload_to = 'static/iemeges/', default = 'pic_folder/None/partner-3.png')
-    
+	order = models.IntegerField(blank=True, null=True)
+	body = models.TextField(blank=True, null=True)
+	slug = models.SlugField(default='', blank=True)
+	
 	class Meta:
 		verbose_name = 'Prensa'
 		verbose_name_plural = 'Prensa links'
 		ordering = ["-fecha"] 
 
-	def __str__(self):
+	def save(self):
+		self.slug = slugify(self.titulo)
+		super(Prensa, self).save()
 
-		return str(self.titulo) + " " + str(self.descripcion) 
+	def __str__(self):
+		return str(self.order) + " " + str(self.titulo)+ " " + str(self.descripcion) 
 
 
