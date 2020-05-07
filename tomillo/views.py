@@ -5,6 +5,11 @@ from django.views.generic import TemplateView, FormView, ListView
 from django.contrib.auth.models import User
 from .forms import ContactForm
 from django.core.mail import send_mail
+from django.utils import translation
+from django.utils.translation import gettext
+from django.http import HttpResponse
+
+
 
 class Inicio(FormView):
     form_class = ContactForm
@@ -82,6 +87,8 @@ class Press(ListView):
     model = Prensa
     template_name = 'tomillo/press.html'
     context_object_name = 'prensa'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
     queryset = Prensa.objects.all()
 
    
