@@ -25,15 +25,6 @@
 							<div class="wrap-post"><!--Start Box-->
 								<div class="entry-header">
 									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-									
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{% static 'images/11.jpg' %}" class="img-responsive" alt="">
-									</div>
-								</div>
-								<div class="entry-content">
-									<a class="btn btn-skin" href="single.html">Read More</a>
 								</div>
 							</div>
 						</article>
@@ -53,7 +44,11 @@
                                        
                                     </p>
                                 </div>
-                            </div>
+							</div>
+							<div class="desc">
+								<h3><a href="single.html">{{a.nombre}}</a></h3>
+								<span class="price">{{a.acerca_de}}</span>
+							</div>
                         </div>
                     </div>
                     {% endfor %}
