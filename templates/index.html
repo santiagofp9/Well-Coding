@@ -36,8 +36,8 @@
 
 <body id="page-top" class="index-page">
     <div class="wrap-body">
-    
-        <!--////////////////////////////////////Header-->
+		
+		<!--////////////////////////////////////Header-->
         <header>
             <!---Main Header--->
             <div class="main-header">
@@ -84,8 +84,8 @@
                             </ul>
                         </div>
                     </div>
-                </nav>
-                
+				</nav>
+				                
                 <!-- Static Header -->
                 <div class="header-text">
                     <div class="header-text-inner">
@@ -102,8 +102,9 @@
                     </a>
                 </div>
             </div>
-        </header>
-<!-- /Section: intro -->
+		</header>
+		
+	<!-- /Section: intro -->
 
 	<!--////////////////////////////////////Container-->
 	<section id="page-content" class="index-page">
@@ -492,6 +493,15 @@
 <footer id="footer">
 	<div class="container">
 		<div class="wrap-footer">
+			<div class="row">
+				{% if messages %}
+				<ul class="messages">
+					{% for message in messages %}
+					<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			</div>
 			<div class="row">
 				<div class="col-md-7">
 					<div class="footer-contact-form">
