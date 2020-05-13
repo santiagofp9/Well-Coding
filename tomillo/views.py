@@ -12,9 +12,11 @@ from django.http import HttpResponse
 
 
 class Inicio(FormView):
+    model = Aliado
     form_class = ContactForm
     template_name = 'index.html'
     success_url = reverse_lazy('inicio')
+    
 
     def form_valid(self, form):
         contact_name = form.cleaned_data['contact_name']
@@ -23,6 +25,11 @@ class Inicio(FormView):
         message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
         send_mail(subject, message, contact_email, ['tomillof5@tomillo.org'], fail_silently = False)
         return super(Inicio, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(Inicio, self).get_context_data(**kwargs)
+        context['aliado'] = Aliado.objects.all()
+        return context
 
 class AboutUs(TemplateView):
     template_name = 'tomillo/aboutUs.html'
