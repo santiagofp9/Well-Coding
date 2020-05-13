@@ -16,7 +16,7 @@ class Inicio(SuccessMessageMixin, FormView):
     form_class = ContactForm
     template_name = 'index.html'
     success_url = reverse_lazy('inicio')
-    success_message = "Your message was sent successfully!"
+    success_message = "Your message has been successfully sent. Thank you for contacting us."
     
 
     def form_valid(self, form):
@@ -48,7 +48,7 @@ class ContactUs(SuccessMessageMixin, FormView):
     form_class = ContactForm
     success_url = reverse_lazy('tomillo:contact')
     template_name = 'tomillo/contact.html'
-    success_message = "Your message was sent successfully!"
+    success_message = "Your message has been successfully sent. Thank you for contacting us."
     
     def form_valid(self, form):
         contact_name = form.cleaned_data['contact_name']

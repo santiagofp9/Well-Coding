@@ -19,15 +19,17 @@
 		<!-----------------Content-------------------->
 		<section class="box-content">
 			<div class="container">										
-				<div class="row">
-					{% if messages %}
-					<ul class="messages">
-						{% for message in messages %}
-						<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-						{% endfor %}
-					</ul>
-					{% endif %}
-				</div>
+				{% if messages %}
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							{% for message in messages %}
+							<div class="alert alert-{{ message.tags }}" role="alert">
+								<p>{{ message }}</p>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
 				<div class="row">
 					<div class="col-md-4 box-item">
 						<h3>Contact Info</h3>
