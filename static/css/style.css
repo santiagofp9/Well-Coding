@@ -294,8 +294,8 @@ article:last-child{border-bottom: none;}
 article:after, article:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 article .post-thumbnail-wrap {text-align: center;width: 100%;margin-bottom: 10px;}
 article .post-thumbnail-wrap img {}
-article h2.entry-title{font-size: 35px;margin: 20px 0 10px;font-weight: 300;}
-article h2.entry-title a{color: #131313;}
+article h2.entry-title{font-size: 20px;margin: 0px 0 10px;font-weight:300;text-align-last: center;}
+article h2.entry-title a{color stroke: color: #131313;}
 article h2.entry-title a:hover{color: #42AB9E;text-decoration: none;}
 article .l-tags{text-align: center; font-size: 11px;}
 
@@ -367,7 +367,7 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 /* ---------------------------------------------------------------------------- */
 .portfolio-box-inner {display: block;position: relative;margin: auto;overflow: hidden;height: 100%; width: 100%;}
 .portfolio-box{}
-
+.lua {width:350px;}
 .portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;color: #fff;-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;}
 
 .portfolio-box .portfolio-box-caption .portfolio-box-description {position: absolute;top: 50%;left: 40px;max-width: 80%;transform: translateY(-50%);}
@@ -375,7 +375,7 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 .portfolio-box .portfolio-box-caption .portfolio-box-description .product-name {-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;opacity:0}
 .portfolio-box .portfolio-box-caption .portfolio-box-description .product-category {font-size: 13px;margin-left: 25px;}
 .portfolio-box .portfolio-box-caption .portfolio-box-description .product-name {font-size: 17px;margin: 0 0 10px -100px;color: #F3E43C;}
-
+.
 .portfolio-box:hover .portfolio-box-caption {background: rgba(66, 171, 158,.9);}
 
 
@@ -468,3 +468,4 @@ a.btn:focus{outline: 0;}
   .product:hover .desc h3 a, .product:focus .desc h3 a {
     color: #d1c286;
   }
+  

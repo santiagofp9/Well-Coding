@@ -70,8 +70,15 @@ class Computing(TemplateView):
 class Networks(TemplateView):
     template_name = 'tomillo/networks.html'
 
-class Resources(TemplateView):
+class Resources(ListView):
+    model = Recurso
     template_name = 'tomillo/resources.html'
+    context_object_name= 'res' 
+    queryset = Recurso.objects.all()
+    
+   
+
+
     
 class Alumnis(ListView):
     model = Alumni
