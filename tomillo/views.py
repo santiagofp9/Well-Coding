@@ -34,8 +34,11 @@ class Inicio(FormView):
 class AboutUs(TemplateView):
     template_name = 'tomillo/aboutUs.html'
 
-class Partners(TemplateView):
+class Partners(ListView):
+    model = Aliado
     template_name = 'tomillo/partners.html'
+    context_object_name = 'aliado'
+    queryset = Aliado.objects.all()
 
 class Blog(TemplateView):
     template_name = 'tomillo/archive.html'
