@@ -7,15 +7,16 @@ from .forms import ContactForm
 from django.core.mail import send_mail
 from django.utils import translation
 from django.utils.translation import gettext
-from django.http import HttpResponse
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 
-class Inicio(FormView):
+class Inicio(SuccessMessageMixin, FormView):
     model = Aliado
     form_class = ContactForm
     template_name = 'index.html'
     success_url = reverse_lazy('inicio')
+    success_message = "Your message was sent successfully!"
     
 
     def form_valid(self, form):
@@ -23,7 +24,7 @@ class Inicio(FormView):
         contact_email = form.cleaned_data['contact_email']
         subject = form.cleaned_data['subject']
         message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
-        send_mail(subject, message, contact_email, ['tomillof5@tomillo.org'], fail_silently = False)
+        send_mail(subject, message, contact_email, ['gotech@alwaysdata.net'], fail_silently = False)
         return super(Inicio, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
@@ -43,17 +44,18 @@ class Partners(ListView):
 class Blog(TemplateView):
     template_name = 'tomillo/archive.html'
 
-class ContactUs(FormView):
+class ContactUs(SuccessMessageMixin, FormView):
     form_class = ContactForm
     success_url = reverse_lazy('tomillo:contact')
     template_name = 'tomillo/contact.html'
+    success_message = "Your message was sent successfully!"
     
     def form_valid(self, form):
         contact_name = form.cleaned_data['contact_name']
         contact_email = form.cleaned_data['contact_email']
         subject = form.cleaned_data['subject']
         message = "{0} has sent you a new message:\n\n{1}".format(contact_name, form.cleaned_data['message'])
-        send_mail(subject, message, contact_email, ['tomillof5@tomillo.org'], fail_silently = False)
+        send_mail(subject, message, contact_email, ['gotech@alwaysdata.net'], fail_silently = False)
         return super(ContactUs, self).form_valid(form)
             
 class TomilloF5(TemplateView):
