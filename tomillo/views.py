@@ -32,6 +32,11 @@ class Inicio(SuccessMessageMixin, FormView):
         context['aliado'] = Aliado.objects.all()
         return context
 
+    def get_context_data(self, **kwargs):
+        context = super(Inicio, self).get_context_data(**kwargs)
+        context['numero'] = Numero.objects.all()
+        return context
+
 class AboutUs(TemplateView):
     template_name = 'tomillo/aboutUs.html'
 

@@ -99,12 +99,6 @@
 
 									
                 <!-- Static Header -->
-                <div class="header-text">
-                    <div class="header-text-inner">
-                        <h1>Keep Calm and Code</h1>
-                        <p>Web under construction </p>
-                    </div>
-                </div><!-- /header-text -->
                 <!---Scroller--->
                 <div id="scroll-page-content">
                     <a href="#page-content" class="scroller">
@@ -125,9 +119,8 @@
 		<section class="box-content box-1">
 			<div class="">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Featured Works</h2>
+					<h2>Problem Statement</h2>
 					<hr class="line">
-					<div class="intro">Our Collection Of Modern Photography. See also our portfolio on <a href="#">Behance</a></div>
 				</div>
 				<div class="content no-gutter wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
 					<div class="portfolio-box col-lg-3 col-md-4 col-xs-6">
@@ -219,7 +212,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="text-center"><a href="archive.html" class="btn btn-skin">See All</a></div>
 			</div>
 		</section>
 		
@@ -236,8 +228,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>Mobile First</h5>
-									<p>Ut volutpat consectetur aliquam. Curabitur auctor in nis ulum ornare. Metus elit vehicula dui. Curabitur auctor in nis ulum ornare. Sed consequat, augue condimentum fermentum</p>
+									<h5>Training path</h5>
+									<p>After Initial and Intermediate V.E.T. or professional training, the participant enrols further education or instruction. This career path is supported by activities of guidance and coaching sessions with our technical staff. </p>
 								</div>
 							</div>
 						</div>
@@ -249,8 +241,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>Clean & Creative</h5>
-									<p>Ut volutpat consectetur aliquam. Curabitur auctor in nis ulum ornare. Metus elit vehicula dui. Curabitur auctor in nis ulum ornare. Sed consequat, augue condimentum fermentum</p>
+									<h5>Access to employment</h5>
+									<p> This positive exit is constant communication and involvement of companies through the project, practical experience in companies, job vacancies reception, free consultancy and labour intermediation, follow up.</p>
 								</div>
 							</div>
 						</div>
@@ -262,8 +254,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>User Friendly</h5>
-									<p>Ut volutpat consectetur aliquam. Curabitur auctor in nis ulum ornare. Metus elit vehicula dui. Curabitur auctor in nis ulum ornare. Sed consequat, augue condimentum fermentum</p>
+									<h5>Entrepreneurship</h5>
+									<p>The participant is referred to our Entrepreneurship Department, part of Youth Business International, a net that supports underserved young entrepreneurs to start, grow and sustain their businesses, enabling them to create jobs. </p>
 								</div>
 							</div>
 						</div>
@@ -281,48 +273,20 @@
 		<section class="box-content box-3">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Our Services</h2>
+					<h2>Impact</h2>
 					<hr class="line">
 					<div class="intro">We Are Absolutely Passionate About Simple Yet Sophisticated User Experience That We, And Our Client, Are Very Prood Of</div>
 				</div>
 				<div class="content wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
 					<div class="row">
+						{% for n in numero %}
 						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/photo-camera.png' %}" class="img-responsive icon"/>
-								<h3>Photography</h3>
-							</div>
+                            <div class="box-item">
+                                <h1>{{n.dato}}</h1>
+                                <h3>{{n.nombre}}</h3>
+                            </div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/social.png' %}" class="img-responsive icon"/>
-								<h3>Social</h3>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/seo.png' %}" class="img-responsive icon"/>
-								<h3>SEO</h3>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/design.png' %}" class="img-responsive icon"/>
-								<h3>Design</h3>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/ux.png' %}" class="img-responsive icon"/>
-								<h3>UX</h3>
-							</div>
-						</div>
-						<div class="col-lg-2 col-md-3 col-sm-6">
-							<div class="box-item">
-								<img src="{% static 'images/credit-card.png' %}" class="img-responsive icon"/>
-								<h3>Ecommerce</h3>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -547,7 +511,7 @@
 								</div>
 								<div class="col-md-10">
 									<h3>Location</h3>
-									<p>C/ Albuñuelas, 15<br>28041 Madrid</p>
+									<p>C/ Albuñuelas, 15<br>28041 Madrid Spain</p>
 								</div>
 							</div>
 						</div>
@@ -560,7 +524,7 @@
 								</div>
 								<div class="col-md-10">
 									<h3>Call</h3>
-									<p>+913 92 04 40</p>
+									<p>+34 913 92 04 40</p>
 								</div>
 							</div>
 						</div>
