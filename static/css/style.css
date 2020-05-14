@@ -86,7 +86,7 @@ body .wrap-body #page-top{position: fixed;right: 40px;bottom: 40px;z-index: 999;
 /* -------------------------------Header-Styles-------------------------------- */
 /* ---------------------------------------------------------------------------- */
 
-header .main-header{position: absolute;height: 100vh;width: 100%;background: url(../images/roadwork.jpg) center center;background-size: cover; z-index: 1000;}
+header .main-header{position: absolute;height: 100vh;width: 100%;background: url(../images/home1.jpg) center center;background-size: cover; z-index: 1000;}
 header .main-header_a{position: relative;height: 40vh;width: 100%;background: url(../images/sup_showcase_bg.jpg) center center;background-size: cover; z-index: 1000;}
 
 body.index-page header{height: 100vh;}

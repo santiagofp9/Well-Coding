@@ -12,7 +12,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 
 class Inicio(SuccessMessageMixin, FormView):
-    model = Aliado
     form_class = ContactForm
     template_name = 'index.html'
     success_url = reverse_lazy('inicio')
@@ -30,11 +29,8 @@ class Inicio(SuccessMessageMixin, FormView):
     def get_context_data(self, **kwargs):
         context = super(Inicio, self).get_context_data(**kwargs)
         context['aliado'] = Aliado.objects.all()
-        return context
-
-    def get_context_data(self, **kwargs):
-        context = super(Inicio, self).get_context_data(**kwargs)
         context['numero'] = Numero.objects.all()
+        context['prensa'] = Prensa.objects.all()
         return context
 
 class AboutUs(TemplateView):

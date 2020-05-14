@@ -275,7 +275,6 @@
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
 					<h2>Impact</h2>
 					<hr class="line">
-					<div class="intro">We Are Absolutely Passionate About Simple Yet Sophisticated User Experience That We, And Our Client, Are Very Prood Of</div>
 				</div>
 				<div class="content wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
 					<div class="row">
@@ -298,7 +297,6 @@
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
 					<h2>What Our Clients Say</h2>
 					<hr class="line">
-					<div class="intro">Lastest Project We Working On</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4">
@@ -354,7 +352,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="box-item wow fadeInDown" data-wow-delay=".1s" data-wow-duration="1s">
-						<blockquote><p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet vultatup duista.</p></blockquote>
+						<blockquote><p>Contribute to the improvement of our society by helping people in vulnerable situations to better their life and their community.</p></blockquote>
+						<p>Tomillo Foundation</p>
 					</div>
 				</div>
 			</div>
@@ -364,56 +363,24 @@
 		<section class="box-content box-6">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Lastest From Blog</h2>
+					<h2>Lastest from press</h2>
 					<hr class="line">
-					<div class="intro">Lastest Project We Working On</div>
 				</div>
 				<div class="content">
 					<div id="owl-blog" class="owl-carousel">
+						{% for p in prensa %}
 						<div class="item">
 							<div class="box-item">
-								<img src="{% static 'images/10.jpg' %}" class="img-responsive"/>
+								<img src="../../static/iemeges/{{p.imagen}}" class="img-responsive" alt="#">
 								<div class="content">
-									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
-									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
+									<h3><a target="_blank" href="{{p.link}}">{{p.titulo}}</a></h3>
+									<p>{{p.descripcion}}</p>
+									<span>{{p.fecha}}</span><br>
+									<a target="_blank" class="btn btn-skin" href="{{p.link}}">Read More</a>
 								</div>
 							</div>
 						</div>
-						<div class="item">
-							<div class="box-item">
-								<img src="{% static 'images/11.jpg' %}" class="img-responsive"/>
-								<div class="content">
-									<h3><a href="{% url 'tomillo:about_us'  %}">Brainstorming Wedding Ideas</a></h3>
-									<p>Suspendisse porttitor. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis, viverra feugiat ipsum volutpat vitae. Fusce justo turpis, sodales sed placerat non, suscipit at diam.</p>
-									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="box-item">
-								<img src="{% static 'images/12.jpg' %}" class="img-responsive"/>
-								<div class="content">
-									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
-									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
-								</div>
-							</div>
-						</div>
-						<div class="item">
-							<div class="box-item">
-								<img src="{% static 'images/13.jpg' %}" class="img-responsive"/>
-								<div class="content">
-									<h3><a href="{% url 'tomillo:about_us'  %}">Planning Our Honeymoon</a></h3>
-									<p>Suspendisse porttitor sapien ac lectus euismod imperdiet. Curabitur nec nibh at massa pellentesque accumsan eu id nibh. Donec accumsan ut mi et tincidunt. Aliquam eget metus nec leo tempor bibendum. Phasellus tincidunt lobortis metus. Duis euismod lorem turpis at diam.</p>
-									<span>MAY 21, 2017 BY VAFPRESS</span><br>
-									<a class="btn btn-skin" href="{% url 'tomillo:about_us'  %}">Read More</a>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
