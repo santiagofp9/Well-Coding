@@ -31,6 +31,7 @@ class Inicio(SuccessMessageMixin, FormView):
         context['aliado'] = Aliado.objects.all()
         context['numero'] = Numero.objects.all()
         context['prensa'] = Prensa.objects.all()
+        context['testimonio'] = Publicacion.objects.all()[:3]
         return context
 
 class AboutUs(TemplateView):

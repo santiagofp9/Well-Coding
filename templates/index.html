@@ -281,8 +281,8 @@
 						{% for n in numero %}
 						<div class="col-lg-2 col-md-3 col-sm-6">
                             <div class="box-item">
-                                <h1>{{n.dato}}</h1>
-                                <h3>{{n.nombre}}</h3>
+                                <h1>{{ n.dato }}</h1>
+                                <h3>{{ n.nombre }}</h3>
                             </div>
 						</div>
 						{% endfor %}
@@ -295,54 +295,19 @@
 		<section class="box-content box-4 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>What Our Clients Say</h2>
+					<h2>Experiences</h2>
 					<hr class="line">
 				</div>
 				<div class="row">
+					{% for t in testimonio %}
 					<div class="col-md-4">
 						<div class="box-item">
-							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
+							<img src="{{ t.foto.url }}" class="img-responsive icon"/>
+							<h3>{{ t.titulo }}</h3>
+							<p>{{ t.descripcion }}</p>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
+					{% endfor %}
 				</div>
 			</div>
 		</section>
@@ -371,12 +336,12 @@
 						{% for p in prensa %}
 						<div class="item">
 							<div class="box-item">
-								<img src="../../static/iemeges/{{p.imagen}}" class="img-responsive" alt="#">
+								<img src="{{ p.imagen.url }}" class="img-responsive" alt="#">
 								<div class="content">
-									<h3><a target="_blank" href="{{p.link}}">{{p.titulo}}</a></h3>
-									<p>{{p.descripcion}}</p>
-									<span>{{p.fecha}}</span><br>
-									<a target="_blank" class="btn btn-skin" href="{{p.link}}">Read More</a>
+									<h3><a target="_blank" href="{{ p.link }}">{{p.titulo}}</a></h3>
+									<p>{{ p.descripcion }}</p>
+									<span>{{ p.fecha }}</span><br>
+									<a target="_blank" class="btn btn-skin" href="{{ p.link }}">Read More</a>
 								</div>
 							</div>
 						</div>
