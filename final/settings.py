@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.0/ref/settings/
 """
+from django.utils.translation import ugettext_lazy as _
 
 import os
 
@@ -31,6 +32,8 @@ ALLOWED_HOSTS = ['gotech.alwaysdata.net', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
+    'translations',
     'material.admin',
     'material.admin.default',
     #'django.contrib.admin',
@@ -40,8 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tomillo',
-    
-
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+
+LANGUAGE_CODE = 'es'
+
+LANGUAGES = (
+    ('es', 'Spanish'),
+    ('en', 'English'),
+    
+)
+MODELTRANSLATION_LANGUAGES = ('es', 'en')
 
 TIME_ZONE = 'UTC'
 
@@ -126,6 +136,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOCALE_PATHS = [ os.path.join(BASE_DIR, 'locale'), ]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

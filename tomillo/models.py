@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-
+from modeltranslation.manager import MultilingualManager
 # Create your models here.
 
 class Numero(models.Model):
@@ -19,7 +19,7 @@ class Aliado(models.Model):
 	nombre = models.CharField(max_length=40)
 	logo = models.ImageField()
 	foto = models.ImageField(null=True)
-	testimonio = models.CharField(max_length=400,null=True)
+	testimonio = models.CharField(max_length=400,blank=True,null=True)
 	autor = models.CharField(max_length=400,null=True)
 	fecha = models.DateField(null=True)
 
@@ -30,36 +30,47 @@ class Aliado(models.Model):
 	def __str__(self):
 		return str(self.nombre)
 
+
 class Programa(models.Model):
-	nombre = models.CharField(max_length=40)
-	descripcion = models.CharField(max_length=300)
+	nombre = models.CharField(max_length=40,null=True)
+	descripcion = models.CharField(max_length=300,null=True)
+	order = models.IntegerField()
+	inicio = models.DateField()
+	lugar = models.CharField(max_length=100,null=True)
+	horas = models.IntegerField()
+	contenido = models.CharField(max_length=400,null=True)
+	requisitos = models.CharField(max_length=300,null=True)
+	patrocinador = models.CharField(max_length=300,null=True)
 
 	class Meta:
 		verbose_name = 'Programa'
 		verbose_name_plural = 'Programas'
+		ordering = ['order']
 
 	def __str__(self):
 		return str(self.nombre)
+		
 
 class Promocion(models.Model):
     nombre = models.CharField(max_length=40)
     duracion = models.IntegerField()
-    fecha_inicio = models.DateField()
-    fecha_fin = models.DateField()
+    inicio = models.DateField()
+    fin = models.DateField()
     programa = models.ForeignKey(Programa, on_delete=models.CASCADE,null=True)
 
     class Meta:
-        verbose_name = 'Promoción'
+        verbose_name = 'Promocion'
         verbose_name_plural = 'Promociones'
 
     def __str__(self):
         return str(self.nombre)
 
+
 class Alumni(models.Model):
-	nombre = models.CharField(max_length=25)
-	apellido = models.CharField(max_length=25)
+	nombre = models.CharField(max_length=25,blank=True,null=True)
+	apellido = models.CharField(max_length=25,blank=True,null=True)
 	foto = models.ImageField(null=True)
-	acerca_de = models.CharField(max_length=250,null=True)
+	acerca_de = models.CharField(max_length=250,blank=True,null=True)
 	promocion = models.ForeignKey(Promocion, on_delete=models.CASCADE, null=True)
 	cv = models.FileField( null = True)
 	
@@ -68,7 +79,7 @@ class Alumni(models.Model):
 		verbose_name_plural = 'Alumnis'
 
 	def __str__(self):
-		return str(self.nombre) 
+		return str(self.nombre)+ " " + str(self.acerca_de)  
 
 
 class Contacto(models.Model):
@@ -125,7 +136,7 @@ class Prensa(models.Model):
 	imagen = models.ImageField(upload_to = 'prensa/', default = 'pic_folder/None/partner-3.png')
 	order = models.IntegerField(blank=True, null=True)
 	body = models.TextField(blank=True, null=True)
-	slug = models.SlugField(default='', blank=True)
+	slug = models.SlugField(max_length=200,default='', blank=True)
 	
 	class Meta:
 		verbose_name = 'Prensa'
@@ -138,5 +149,6 @@ class Prensa(models.Model):
 
 	def __str__(self):
 		return str(self.order) + " " + str(self.titulo)+ " " + str(self.descripcion) 
+
 
 

@@ -3,6 +3,7 @@ from django.urls import path
 from .views import *
 from tomillo import views
 from django.contrib.auth.decorators import login_required
+from django.conf.urls import url, include
 
 urlpatterns = [
     path('about_us/', AboutUs.as_view(), name = 'about_us'),
@@ -21,5 +22,16 @@ urlpatterns = [
     path('press/', Press.as_view(), name = 'press'),
     path('legal/', Legal.as_view(), name = 'legal'),
     path('contact/', ContactUs.as_view(), name='contact'),
+    path('index/', Index, name='set_language'),
+    path('i18n/', include('django.conf.urls.i18n')),
+
  
   ]
+
+
+  
+   
+
+    
+
+  

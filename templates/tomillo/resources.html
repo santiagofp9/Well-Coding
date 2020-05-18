@@ -1,12 +1,12 @@
 {% extends 'tomillo/template.html' %}
-{% load static %}
+{% load static %}{% load i18n %}
 {% block content %}
 			
 			<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Resources</p>
-					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">Resources</h1>
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Resources" %}</p>
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Resources" %}</h1>
 				</div>
 			</div><!-- /header-text -->
 		</div>

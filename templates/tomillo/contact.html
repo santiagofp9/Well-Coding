@@ -1,12 +1,12 @@
 {% extends 'tomillo/template.html' %}
-{% load static %}
+{% load static %}{% load i18n %}
 {% block content %}
 	
 			<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Leave us a message</p>
-					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">Contact us</h1>
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Leave us a message" %}</p> 
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Contact us" %}</h1>
 				</div>
 			</div><!-- /header-text -->
 		</div>
@@ -32,15 +32,15 @@
 				{% endif %}
 				<div class="row">
 					<div class="col-md-4 box-item">
-						<h3>Contact Info</h3>
-						<span>Do we share the same values? <br>Do you want to be a part of our project? <br>Leave us a message.</span><br> <br>
-						<p>C/ Albuñuelas, 15<br>28041 Madrid Spain</p>
+						<h3>{% trans "Contact Info" %}</h3>
+						<span>{% trans "Do we share the same values?" %} <br>{% trans "Do you want to be a part of our project? " %}<br>{% trans "Leave us a message." %}</span><br> <br>
+						<p>C/ Albuñuelas, 15<br>{% trans "28041 Madrid Spain" %}</p>
 						<p>+34 913 92 04 40</p>
 						<p>tomillof5@tomillo.org</p>
 					</div>
 					<div class="col-md-8">
 
-						<h3>Contact Form</h3>
+						<h3>{% trans "Contact Form" %}</h3>
 						<form name="form1" method="post" action=""> {% csrf_token %}
 							<div class="row">
 								<div class="col-md-6">
@@ -66,7 +66,7 @@
 									<div class="form-group">
 										{{ form.message }}
 									</div>						
-									<button type="submit" class="btn btn-skin btn-block" name="submitcontact" id="submitcontact">Submit</button>
+									<button type="submit" class="btn btn-skin btn-block" name="submitcontact" id="submitcontact">{% trans "Submit" %}</button>
 								</div>
 							</div>
 						</form>

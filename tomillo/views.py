@@ -8,6 +8,7 @@ from django.core.mail import send_mail
 from django.utils import translation
 from django.utils.translation import gettext
 from django.contrib.messages.views import SuccessMessageMixin
+from django.http import HttpResponse
 
 
 
@@ -107,9 +108,14 @@ class Press(ListView):
     model = Prensa
     template_name = 'tomillo/press.html'
     context_object_name = 'prensa'
+    queryset = Prensa.objects.all()
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
-    queryset = Prensa.objects.all()
+
+
+def Index(request):
+    return render(request,'tomillo/template.html')
+    
 
    
 

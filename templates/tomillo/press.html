@@ -1,5 +1,5 @@
 {% extends 'tomillo/template.html' %}
-{% load static %}
+{% load static %}{% load i18n %}
 
 {% block content %}
 
@@ -7,8 +7,8 @@
 	<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Press</p>
-					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">Press</h1>
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Press" %}</p>
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Press" %}</h1>
 				</div>
 			</div><!-- /header-text -->
 		</div>
@@ -32,7 +32,7 @@
 								<div class="entry-header">
 									
 										<h2 class="text-uppercase font-weight-bold text-center"><a href="">{{press.titulo}}</a></h2>
-									
+										
 											<span class="entry-meta">
 												<ul class="list-inline link">
 													<li><a href="#">{{press.fecha}}</a></li>
@@ -46,7 +46,7 @@
 								</div>
 								<div class="entry-content">
 									<p> {{press.descripcion}} </p> 
-									<a class="btn btn-skin" href="{{press.link}}">Read More</a>
+									<a class="btn btn-skin" href="{{press.link}}">{% trans "Read More" %}</a>
 								</div>
 							</div>
 							{% endfor %}
@@ -60,10 +60,10 @@
 							<tr>
 								<th>
 									{% if page_obj.has_next %}
-									<a class="btn btn-skin" role="button" href="?page={{ page_obj.next_page_number }}">Siguiente</a>
+									<a class="btn btn-skin" role="button" href="?page={{ page_obj.next_page_number }}">{% trans "Next" %}</a>
 									{% endif %}
 									{% if page_obj.has_previous %}
-									<a class="btn btn-skin" role="button" href="?page={{ page_obj.previous_page_number }}">Atrás</a>
+									<a class="btn btn-skin" role="button" href="?page={{ page_obj.previous_page_number }}">{% trans "Back" %}</a>
 									{% endif %}
 								</th>
 							</tr>
