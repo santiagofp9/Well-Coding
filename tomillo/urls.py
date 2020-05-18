@@ -21,5 +21,7 @@ urlpatterns = [
     path('press/', Press.as_view(), name = 'press'),
     path('legal/', Legal.as_view(), name = 'legal'),
     path('contact/', ContactUs.as_view(), name='contact'),
+    
+
  
   ]

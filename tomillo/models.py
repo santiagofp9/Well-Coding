@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 
+
 # Create your models here.
 
 class Numero(models.Model):
@@ -85,9 +86,9 @@ class Contacto(models.Model):
 
 class Recurso(models.Model):
 	nombre = models.CharField(max_length=40)
-	archivo = models.FileField(null=True)
-	link = models.URLField(max_length=500,null=True)
-	programa = models.ForeignKey(Promocion, on_delete=models.CASCADE, null=True)
+	archivo = models.FileField(null=True,upload_to='archivos/')
+	link = models.URLField(null=True)
+	programa = models.ForeignKey(Programa, on_delete=models.CASCADE, null=True)
 
 	class Meta:
 		verbose_name = 'Recurso'
@@ -95,6 +96,7 @@ class Recurso(models.Model):
 
 	def __str__(self):
 		return str(self.nombre)
+
 
 
 class Publicacion(models.Model):

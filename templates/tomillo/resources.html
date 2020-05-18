@@ -27,7 +27,7 @@
 						{% for r in res %}
 							<div class="wrap-post"><!--Start Box1-->
 								<div class="entry-header">
-									<h3 class="entry-title"><a href="">{{r.programa.programa.nombre}}</a></h3>
+									<h3 class="entry-title"><a href="">{{r.programa.nombre}}</a></h3>
 									<h3 class="entry-title"><a href="">{{r.nombre}}</a></h3>
 
 									
@@ -39,28 +39,12 @@
 									</div>
 
 									<div class="entry-content">
-									<a class="btn btn-skin" href="{{r.link}}">{{r.archivo}} </a>
+									<a target ="_blank" class ="btn btn-skin" href= "../../static/iemeges/{{r.archivo}}">Download</a>
 								</div>
 								</div>
 							</div>
 							{% endfor %}
 
-
-							
-								
-								
-									
-
-
-								
-								
-
-
-								
-							
-						
-
-						
 						
 					</article>
 				</div>
@@ -78,3 +62,6 @@
     </script>
 
 {% endblock content %}
+
+
+
