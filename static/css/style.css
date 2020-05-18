@@ -202,6 +202,7 @@ li:hover > .ocult li{display: block;}
 /* -------------------------------------Box 1---------------------------------- */
 /* ---------------------------------------------------------------------------- */
 .box-content.box-1 {}
+.box-content.box-1 .portfolio-box-caption:hover {background-color: #42AB9E;}
 .box-content.box-1 .heading .intro a{font-weight: bold;}
 .box-content.box-1 .btn-skin{font-size: 19px; margin: 40px auto 0;}
 
