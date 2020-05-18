@@ -1,12 +1,12 @@
 {% extends 'tomillo/template.html' %}
-{% load static %}
+{% load static %}{% load i18n %}
 {% block content %}
 			
 			<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">Be Our Partner</p>
-					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">Partners</h1>
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Be Our Partner" %}</p>
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Partners" %}</h1>
 				</div>
 			</div><!-- /header-text -->
 		</div>
@@ -23,7 +23,7 @@
 						<article>
 							<div class="wrap-post"><!--Start Box-->
 								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
+									<h2 class="entry-title"><a href="single.html">{% trans "RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY" %}</a></h2>
 								</div>
 							</div>
 						</article>
@@ -35,7 +35,7 @@
                     <div class="col-md-4 text-center animate-box">
                         <div class="product">
                             
-                            <div class="product-grid" style="background-image:url(' ../../static{{ a.foto.url }}');">
+                            <div class="product-grid" style="background-image:url(' ../../static/images/{{ a.foto.url }}');">
                                 <div class="inner">
                                 </div>
 							</div>

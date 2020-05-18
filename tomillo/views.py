@@ -9,10 +9,15 @@ from django.utils import translation
 from django.utils.translation import gettext
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
+<<<<<<< HEAD
 from django.http import FileResponse
 from django.shortcuts import get_object_or_404
 from django.views.generic.edit import FormView
 from django.forms import ModelForm
+=======
+
+
+>>>>>>> master
 
 class Inicio(SuccessMessageMixin, FormView):
     form_class = ContactForm
@@ -107,9 +112,14 @@ class Press(ListView):
     model = Prensa
     template_name = 'tomillo/press.html'
     context_object_name = 'prensa'
+    queryset = Prensa.objects.all()
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
-    queryset = Prensa.objects.all()
+
+
+def Index(request):
+    return render(request,'tomillo/template.html')
+    
 
    
 

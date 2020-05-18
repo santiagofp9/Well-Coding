@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,34 +53,52 @@
                         </div>
                         <div class="collapse navbar-collapse navbar-ex1-collapse">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="{% url 'inicio' %}">Home</a></li>
-								<li><a href="{% url 'tomillo:about_us'  %}">About Us</a></li>
-								<li><a href="{% url 'tomillo:partners'  %}">Partners</a></li>
-                                <li id="tra" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <i class="fa fa-chevron-down"></i></a>
+                                <li class="active"><a href="{% url 'inicio' %}">{% trans "Home" %}</a></li>
+								<li><a href="{% url 'tomillo:about_us'  %}">{% trans "About Us" %}</a></li>
+								<li><a href="{% url 'tomillo:partners'  %}">{% trans "Partners" %}</a></li>
+                                <li id="tra" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Training" %} <i class="fa fa-chevron-down"></i></a>
 									<div class="dropdown-menu">
 										<div class="dropdown-inner">
 											<ul class="list-unstyled">
-												<li class="dropdown-submenu"><a href="{% url 'tomillo:f5' %}" class="dropdown-toggle" data-toggle="dropdown">Tomillo F5  <i class="fa fa-chevron-right"></i></a>
+												<li class="dropdown-submenu"><a href="{% url 'tomillo:f5' %}" class="dropdown-toggle" data-toggle="dropdown">{% trans "Tomillo F5" %}<i class="fa fa-chevron-right"></i></a>
 													<ul class="dropdown-menu ocult">
-														<li><a href="{% url 'tomillo:promo2020' %}">2019-2020</a></li>
+														<li><a href="{% url 'tomillo:promo2020' %}">{% trans "Graduation 2020" %}</a></li>
 													</ul>
 												</li>
-												<li><a href="{% url 'tomillo:cybersecurity' %}">Cybersecurity</a></li>
-												<li class="dropdown-submenu"><a href="{% url 'tomillo:formal_education' %}" class="dropdown-toggle" data-toggle="dropdown">Formal Education  <i class="fa fa-chevron-right"></i></a>
+												<li><a href="{% url 'tomillo:cybersecurity' %}">{% trans "Cybersecurity" %}</a></li>
+												<li class="dropdown-submenu"><a href="{% url 'tomillo:formal_education' %}" class="dropdown-toggle" data-toggle="dropdown">{% trans "Formal Education" %}<i class="fa fa-chevron-right"></i></a>
 													<ul class="dropdown-menu ocult">
-														<li><a href="{% url 'tomillo:ele_eco' %}">Electricity and Electronics</a></li>
-														<li><a href="{% url 'tomillo:computing' %}">Computing and Communication</a></li>
-														<li><a href="{% url 'tomillo:adm' %}">Administration</a></li>
-														<li><a href="{% url 'tomillo:networks' %}">Micro-computing and Networks</a></li>
+														<li><a href="{% url 'tomillo:ele_eco' %}">{% trans "Electricity and Electronics" %}</a></li>
+														<li><a href="{% url 'tomillo:computing' %}">{% trans "Computing and Communication" %}</a></li>
+														<li><a href="{% url 'tomillo:adm' %}">{% trans "Administration" %}</a></li>
+														<li><a href="{% url 'tomillo:networks' %}">{% trans "Micro-computing and Networks" %}</a></li>
 													</ul>													
 												</li>	
 											</ul>
 										</div>
 									</div>
 								</li>
-								<li><a href="{% url 'tomillo:resources' %}">Resources</a></li>
-								<li><a href="{% url 'tomillo:alumni' %}">Alumni</a></li>
-                                <li><a href="{% url 'tomillo:contact' %}">Contact</a></li>
+								<li><a href="{% url 'tomillo:resources' %}">{% trans "Resources" %}</a></li>
+								<li><a href="{% url 'tomillo:alumni' %}">{% trans "Alumni" %}</a></li>
+                                <li><a href="{% url 'tomillo:contact' %}">{% trans "Contact" %}</a></li>
+                                <li>
+                                	<form action="{% url 'tomillo:set_language' %}" method="post" class="form-inline">{% csrf_token %} 	
+										<input name="next" type="hidden" value="{{ redirect_to }}" />											
+											<select name="language" style ="color:rgb(13, 150, 115); font-size:14px;height:30px">
+												
+												{% get_current_language as LANGUAGE_CODE %}
+												{% get_language_info_list for LANGUAGES as languages %}
+												{% get_available_languages as LANGUAGES %}
+												{% for lang in LANGUAGES %}			
+												 	<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %} type=”submit”>
+														{{ lang.1 }} ({{ lang.0 }}) 
+													</option>
+												{% endfor %}
+															
+											</select>
+										<input class= "span3" type="submit" value="Go" class="btn btn-success" />					
+									</form>
+								</li>
                             </ul>
                         </div>
 					</div>
@@ -99,6 +117,12 @@
 
 									
                 <!-- Static Header -->
+                <div class="header-text">
+                    <div class="header-text-inner">
+                        <h1>{% trans "Keep Calm and Code" %}</h1>
+                        <p>{% trans "Web under construction" %} </p>
+                    </div>
+                </div>
                 <!---Scroller--->
                 <div id="scroll-page-content">
                     <a href="#page-content" class="scroller">
@@ -119,7 +143,7 @@
 		<section class="box-content box-1">
 			<div class="">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Problem Statement</h2>
+					<h2>{% trans "Problem Statement" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="content no-gutter wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
@@ -128,7 +152,7 @@
 							<img src="{% static 'adaptadas/f51.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -139,7 +163,7 @@
 							<img src="{% static 'adaptadas/f52.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -150,7 +174,7 @@
 							<img src="{% static 'adaptadas/f53.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -161,7 +185,7 @@
 							<img src="{% static 'adaptadas/f54.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -172,7 +196,7 @@
 							<img src="{% static 'adaptadas/f55.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -183,7 +207,7 @@
 							<img src="{% static 'adaptadas/f56.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -194,7 +218,7 @@
 							<img src="{% static 'adaptadas/cybs1.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -205,7 +229,7 @@
 							<img src="{% static 'adaptadas/cybs2.jpg' %}" class="img-responsive" alt="">
 							<div class="portfolio-box-caption">
 								<div class="portfolio-box-description">
-									<h3 class="product-name">Project Name</h3>
+									<h3 class="product-name">{% trans "Project Name" %}</h3>
 									<p class="product-category">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi vulputate est sed faucibus elit.</p>
 								</div>
 							</div>
@@ -228,8 +252,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>Training path</h5>
-									<p>After Initial and Intermediate V.E.T. or professional training, the participant enrols further education or instruction. This career path is supported by activities of guidance and coaching sessions with our technical staff. </p>
+									<h5>{% trans "Training path" %}</h5>
+									<p>{% trans "After Initial and Intermediate V.E.T. or professional training, the participant enrols further education or instruction. This career path is supported by activities of guidance and coaching sessions with our technical staff." %} </p>
 								</div>
 							</div>
 						</div>
@@ -241,8 +265,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>Access to employment</h5>
-									<p> This positive exit is constant communication and involvement of companies through the project, practical experience in companies, job vacancies reception, free consultancy and labour intermediation, follow up.</p>
+									<h5>{% trans "Access to employment" %}</h5>
+									<p> {% trans "This positive exit is constant communication and involvement of companies through the project, practical experience in companies, job vacancies reception, free consultancy and labour intermediation, follow up." %}</p>
 								</div>
 							</div>
 						</div>
@@ -254,8 +278,8 @@
 									</div>
 								</div>
 								<div class="col-md-9">
-									<h5>Entrepreneurship</h5>
-									<p>The participant is referred to our Entrepreneurship Department, part of Youth Business International, a net that supports underserved young entrepreneurs to start, grow and sustain their businesses, enabling them to create jobs. </p>
+									<h5>{% trans "Entrepreneurship" %}</h5>
+									<p>{% trans "The participant is referred to our Entrepreneurship Department, part of Youth Business International, a net that supports underserved young entrepreneurs to start, grow and sustain their businesses, enabling them to create jobs." %} </p>
 								</div>
 							</div>
 						</div>
@@ -273,7 +297,7 @@
 		<section class="box-content box-3">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Impact</h2>
+					<h2>{% trans "Impact" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="content wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
@@ -295,28 +319,28 @@
 		<section class="box-content box-4 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>What Our Clients Say</h2>
+					<h2>{% trans "What Our Clients Say" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
@@ -325,21 +349,21 @@
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="box-item">
 							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>GREAT & FAST SERVICES</h3>
+							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
 						</div>
 					</div>
@@ -352,8 +376,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="box-item wow fadeInDown" data-wow-delay=".1s" data-wow-duration="1s">
-						<blockquote><p>Contribute to the improvement of our society by helping people in vulnerable situations to better their life and their community.</p></blockquote>
-						<p>Tomillo Foundation</p>
+						<blockquote><p>{% trans "Contribute to the improvement of our society by helping people in vulnerable situations to better their life and their community." %}</p></blockquote>
+						<p>{% trans "Tomillo Foundation" %}</p>
 					</div>
 				</div>
 			</div>
@@ -363,7 +387,7 @@
 		<section class="box-content box-6">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Lastest from press</h2>
+					<h2>{% trans "Lastest from press" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="content">
@@ -376,7 +400,7 @@
 									<h3><a target="_blank" href="{{p.link}}">{{p.titulo}}</a></h3>
 									<p>{{p.descripcion}}</p>
 									<span>{{p.fecha}}</span><br>
-									<a target="_blank" class="btn btn-skin" href="{{p.link}}">Read More</a>
+									<a target="_blank" class="btn btn-skin" href="{{p.link}}">{% trans "Read More" %}</a>
 								</div>
 							</div>
 						</div>
@@ -391,7 +415,7 @@
 		<section class="box-content box-7 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInDown" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Sponsors</h2>
+					<h2>{% trans "Sponsors" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="content wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s">
@@ -414,7 +438,7 @@
 		<section class="box-content box-7 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInDown" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Partners</h2>
+					<h2>{% trans "Partners" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="content wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
@@ -439,7 +463,7 @@
 			<div class="row">
 				<div class="col-md-7">
 					<div class="footer-contact-form">
-						<h2 class="footer-title">Do we share the same values? <br>Do you want to be a part of our project? <br><br>Leave us a message.</h2>
+						<h2 class="footer-title">{% trans "Do we share the same values?" %}<br>{% trans "Do you want to be a part of our project?" %}<br><br>{% trans "Leave us a message." %}</h2>
 						<form name="" method="post" action=""> {% csrf_token %}
 							<div class="row">
 								<div class="col-md-6">
@@ -463,7 +487,7 @@
 									</div>						
 								</div>
 							</div>
-							<button type="submit" class="btn btn-skin" name="submitcontact" id="submitcontact">Submit</button>
+							<button type="submit" class="btn btn-skin" name="submitcontact" id="submitcontact">{% trans "Submit" %}</button>
 						</form>
 					</div>
 				</div>
@@ -477,8 +501,8 @@
 									</div>
 								</div>
 								<div class="col-md-10">
-									<h3>Location</h3>
-									<p>C/ Albuñuelas, 15<br>28041 Madrid Spain</p>
+									<h3>{% trans "Location" %}</h3>
+									<p>C/ Albuñuelas, 15<br>{% trans "28041 Madrid Spain" %}</p>
 								</div>
 							</div>
 						</div>
@@ -490,7 +514,7 @@
 									</div>
 								</div>
 								<div class="col-md-10">
-									<h3>Call</h3>
+									<h3>{% trans "Call" %}</h3>
 									<p>+34 913 92 04 40</p>
 								</div>
 							</div>
@@ -518,7 +542,7 @@
 				<li><a target="_blank" href="https://www.facebook.com/FundacionTomillo/">Facebook</a></li>
 				<li><a target="_blank" href="https://www.instagram.com/fundaciontomillo/">Instagram</a></li>
 				<li><a target="_blank" href="https://twitter.com/ftomillo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
-				<li><a target="_blank" href="{% url 'tomillo:press'  %}">Press</a></li>
+				<li><a target="_blank" href="{% url 'tomillo:press'  %}">{% trans "Press" %}</a></li>
 				<li><a href="{% url 'tomillo:legal'  %}">Legal</a></li>
 			</ul>
 		</div> 

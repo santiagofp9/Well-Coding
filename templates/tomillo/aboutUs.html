@@ -1,12 +1,12 @@
 {% extends 'tomillo/template.html' %}
-{% load static %}
+{% load static %}{% load i18n %}
 {% block content %}
 
 		<!-- Static Header -->
 		<div class="header-text">
 			<div class="header-text-inner">
-				<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">About Us</p>
-				<h1 class="wow fadeInLeft" data-wow-duration="1.5s">About Us</h1>
+				<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "About Us" %}</p>
+				<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "About Us" %}</h1>
 			</div>
 		</div><!-- /header-text -->
 	</div>
@@ -22,7 +22,7 @@
 				<article class="single-post">
 					<div class="wrap-post"><!--Start Box-->
 						<div class="entry-header text-center">
-							<h1 class="entry-title">Tomillo Foundation</h1>
+							<h1 class="entry-title">{% trans "Tomillo Foundation" %}</h1>
 						</div>
 						<div class="post-thumbnail-wrap">
 							<div class="portfolio-box zoom-effect">
@@ -30,26 +30,26 @@
 							</div>
 						</div>
 						<div class="entry-content">
-							<p>The Foundation aims to: </p>
+							<p>{% trans "The Foundation aims to:" %}</p>
 							<div class="note">
 							  <ol>
-								<li>Promote, support or undertake activities dedicated to facilitate the social and occupational inclusion of those disadvantaged or at social risk, through training programs and/or the requalification, guidance services and other initiatives.</li>
-								<li>Promote, support, or undertake pre-school, child, and youth education activities in socially disadvantaged environments, to improve access to educational resources and prevent academic failure.</li>
-								<li>Promote, support, or undertake other activities that, benefitting society, are directly or indirectly related to the aforementioned objectives, including cultural activities, study and analysis of social and economic reality, volunteer promotion, development of social economy and sustainability<br><br></li>
+								<li>{% trans "Promote, support or undertake activities dedicated to facilitate the social and occupational inclusion of those disadvantaged or at social risk, through training programs and/or the requalification, guidance services and other initiatives." %}</li>
+								<li>{% trans "Promote, support, or undertake pre-school, child, and youth education activities in socially disadvantaged environments, to improve access to educational resources and prevent academic failure." %}</li>
+								<li>{% trans "Promote, support, or undertake other activities that, benefitting society, are directly or indirectly related to the aforementioned objectives, including cultural activities, study and analysis of social and economic reality, volunteer promotion, development of social economy and sustainability" %}<br><br></li>
 							  </ol>
 							  <div class="clear"></div>
 							</div>
-							<blockquote><p>Tomillo Foundation Mission: <br>Contribute to the improvement of our society by helping people in vulnerable situations to better their life and their community.</blockquote>
-							<p><br><br>Tomillo Foundacion main activities are:</p>
+							<blockquote><p>{% trans "Tomillo Foundation Mission:" %}<br>{% trans "Contribute to the improvement of our society by helping people in vulnerable situations to better their life and their community." %}</blockquote>
+							<p><br><br>{% trans "Tomillo Foundacion main activities are:" %}</p>
 							<div class="note">
 							  <ol>
-								<li>School and Community </li>
-								<li>Training and Employment</li>
-								<li>Studies and Social Innovation<br><br></li>
+								<li>{% trans "School and Community" %}</li>
+								<li>{% trans "Training and Employment" %}</li>
+								<li>{% trans "Studies and Social Innovation" %}<br><br></li>
 							  </ol>
 							  <div class="clear"></div>
 							</div>
-							<p><code>Website Address: <a target="_blank" href="https://tomillo.org/">Fundation Tomillo</a></code></p>
+							<p><code>{% trans "Website Address:" %} <a target="_blank" href="https://tomillo.org/"> {% trans "Tomillo Fundation" %}</a></code></p>
 						</div>
 					</div>
 				</article>

@@ -20,6 +20,12 @@ from tomillo.views import *
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
+from django.conf.urls.i18n import i18n_patterns
+from django.utils.translation import gettext_lazy as _
+from django.conf.urls import include, url
+
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,3 +37,5 @@ urlpatterns = [
 
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
