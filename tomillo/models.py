@@ -1,12 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-<<<<<<< HEAD
 
-
-=======
 from modeltranslation.manager import MultilingualManager
->>>>>>> master
 # Create your models here.
 
 class Numero(models.Model):
@@ -38,7 +34,7 @@ class Aliado(models.Model):
 
 
 class Programa(models.Model):
-	nombre = models.CharField(max_length=40,null=True)
+	nombrePrograma = models.CharField(max_length=40,null=True)
 	descripcion = models.CharField(max_length=300,null=True)
 	order = models.IntegerField()
 	inicio = models.DateField()
@@ -58,7 +54,7 @@ class Programa(models.Model):
 		
 
 class Promocion(models.Model):
-    nombre = models.CharField(max_length=40)
+    nombrePromo = models.CharField(max_length=40)
     duracion = models.IntegerField()
     inicio = models.DateField()
     fin = models.DateField()
@@ -101,7 +97,7 @@ class Contacto(models.Model):
         
 
 class Recurso(models.Model):
-	nombre = models.CharField(max_length=40)
+	nombreRec = models.CharField(max_length=40)
 	archivo = models.FileField(null=True,upload_to='archivos/')
 	link = models.URLField(null=True)
 	programa = models.ForeignKey(Programa, on_delete=models.CASCADE, null=True)

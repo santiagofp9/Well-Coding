@@ -319,63 +319,16 @@
 		<section class="box-content box-4 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-<<<<<<< HEAD
-					<h2>{% trans "What Our Clients Say" %}</h2>
-=======
 					<h2>Experiences</h2>
->>>>>>> master
 					<hr class="line">
 				</div>
 				<div class="row">
 					{% for t in testimonio %}
 					<div class="col-md-4">
 						<div class="box-item">
-<<<<<<< HEAD
-							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner1.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner3.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="box-item">
-							<img src="{% static 'images/partner2.png' %}" class="img-responsive icon"/>
-							<h3>{% trans "GREAT & FAST SERVICES" %}</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et adipisicing elit</p>
-=======
 							<img src="{{ t.foto.url }}" class="img-responsive icon"/>
 							<h3>{{ t.titulo }}</h3>
 							<p>{{ t.descripcion }}</p>
->>>>>>> master
 						</div>
 					</div>
 					{% endfor %}
@@ -409,17 +362,10 @@
 							<div class="box-item">
 								<img src="{{ p.imagen.url }}" class="img-responsive" alt="#">
 								<div class="content">
-<<<<<<< HEAD
-									<h3><a target="_blank" href="{{p.link}}">{{p.titulo}}</a></h3>
-									<p>{{p.descripcion}}</p>
-									<span>{{p.fecha}}</span><br>
-									<a target="_blank" class="btn btn-skin" href="{{p.link}}">{% trans "Read More" %}</a>
-=======
 									<h3><a target="_blank" href="{{ p.link }}">{{p.titulo}}</a></h3>
 									<p>{{ p.descripcion }}</p>
 									<span>{{ p.fecha }}</span><br>
 									<a target="_blank" class="btn btn-skin" href="{{ p.link }}">Read More</a>
->>>>>>> master
 								</div>
 							</div>
 						</div>

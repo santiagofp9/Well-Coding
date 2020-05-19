@@ -20,8 +20,13 @@ class NumeroTranslationOptions(TranslationOptions):
 
 @register(Programa)
 class ProgramaTranslationOptions(TranslationOptions):
-    fields = ('descripcion','contenido','requisitos',)
+    fields = ('descripcion','contenido','requisitos','nombrePrograma',)
 
 @register(Promocion)
 class PromocionTranslationOptions(TranslationOptions):
-    fields = ('nombre',)
+    fields = ('nombrePromo',)
+
+
+@register(Recurso)
+class RecursoTranslationOptions(TranslationOptions):
+    fields = ('nombreRec',)
