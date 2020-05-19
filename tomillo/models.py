@@ -50,7 +50,7 @@ class Programa(models.Model):
 		ordering = ['order']
 
 	def __str__(self):
-		return str(self.nombre)
+		return str(self.nombrePrograma)
 		
 
 class Promocion(models.Model):
@@ -65,7 +65,7 @@ class Promocion(models.Model):
         verbose_name_plural = 'Promociones'
 
     def __str__(self):
-        return str(self.nombre)
+        return str(self.nombrePromo)
 
 
 class Alumni(models.Model):
@@ -107,7 +107,7 @@ class Recurso(models.Model):
 		verbose_name_plural = 'Recursos'
 
 	def __str__(self):
-		return str(self.nombre)
+		return str(self.nombreRec)
 
 
 
