@@ -22,12 +22,13 @@ class Numero(models.Model):
 
 class Aliado(models.Model):
 	nombre = models.CharField(max_length=40)
+	link = models.URLField(max_length=500,null=True)
 	logo = models.ImageField()
 	foto = models.ImageField(null=True)
 	testimonio = models.CharField(max_length=400,blank=True,null=True)
 	autor = models.CharField(max_length=400,null=True)
 	fecha = models.DateField(null=True)
-
+	
 	class Meta:
 		verbose_name = 'Aliado'
 		verbose_name_plural = 'Aliados'
