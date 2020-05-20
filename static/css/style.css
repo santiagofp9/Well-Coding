@@ -23,7 +23,7 @@ h1 {font-size: 38px;}
 h2 {font-size: 36px;}
 h3 {font-size: 32px;}
 h4 {font-size: 28px;}
-h5 {font-size: 22px;}
+h5 {font-size: 24px;}
 h6 {font-size: 20px;}
 
 h1,h2,h3,h4,h5,h6 {font-weight: 600;color: #333;font-family: 'Montserrat',sans-serif;letter-spacing: 1px;line-height: 1.3;}
@@ -472,3 +472,4 @@ a.btn:focus{outline: 0;}
 .resumen{border: 35px solid white;border-top: 0px solid white;} 
 .culoare{color: #42AB9E;} 
 .classWithM { margin:10px } 
+h5.recursos{font-size:22px;}
