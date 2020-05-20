@@ -327,6 +327,7 @@ article .entry-content ol {float: left;text-align: justify;margin: 10px 50px;lis
 
 .comments-are{border-top: 1px solid #e1e1e1;margin: 50px 0 ;}
 .comments-are textarea {height:170px;}
+.sponsor {margin: auto;display: block;}
 
 /* ---------------------------------------------------------------------------- */
 /* ------------------------------------Footer---------------------------------- */
