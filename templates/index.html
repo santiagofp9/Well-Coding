@@ -319,7 +319,7 @@
 		<section class="box-content box-4 box-style-2">
 			<div class="container">
 				<div class="heading wow fadeInUp" data-wow-delay=".1s" data-wow-duration="1s">
-					<h2>Experiences</h2>
+					<h2>{% trans "Experiences" %}</h2>
 					<hr class="line">
 				</div>
 				<div class="row">
@@ -359,8 +359,8 @@
 					<div id="owl-blog" class="owl-carousel">
 						{% for p in prensa %}
 						<div class="item">
-							<div class="box-item">
-								<img src="{{ p.imagen.url }}" class="img-responsive" alt="#">
+							<div class="box-item" style ="font-size:14px;height:700px">
+								<img src="{{ p.imagen.url }}" class="img-responsive" alt="#"style ="font-size:14px;height:200px">
 								<div class="content">
 									<h3><a target="_blank" href="{{ p.link }}">{{p.titulo}}</a></h3>
 									<p>{{ p.descripcion }}</p>
