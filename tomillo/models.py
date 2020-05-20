@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
-
 from modeltranslation.manager import MultilingualManager
 # Create your models here.
 
