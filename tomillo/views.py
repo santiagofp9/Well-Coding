@@ -9,12 +9,6 @@ from django.utils import translation
 from django.utils.translation import gettext
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
-from django.http import FileResponse
-from django.shortcuts import get_object_or_404
-from django.views.generic.edit import FormView
-from django.forms import ModelForm
-
-
 
 class Inicio(SuccessMessageMixin, FormView):
     form_class = ContactForm
@@ -90,6 +84,7 @@ class Networks(TemplateView):
     template_name = 'tomillo/networks.html'
 
 class Resources(ListView):
+    paginate_by = 9
     model = Recurso
     template_name = 'tomillo/resources.html'
     context_object_name= 'res' 
