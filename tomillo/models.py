@@ -101,6 +101,8 @@ class Recurso(models.Model):
 	archivo = models.FileField(null=True,upload_to='archivos/')
 	link = models.URLField(null=True)
 	programa = models.ForeignKey(Programa, on_delete=models.CASCADE, null=True)
+	imagen = models.ImageField(upload_to ='archivos/', null = True)
+
 
 	class Meta:
 		verbose_name = 'Recurso'
