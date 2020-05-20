@@ -278,6 +278,10 @@ li:hover > .ocult li{display: block;}
 .box-content.box-6 .box-item .content h3 a{color: #333;}
 .box-content.box-6 .box-item .content h3 a:hover{color: #42AB9E;text-decoration: none;}
 .box-content.box-6 .box-item .content span{color: #a9a9a9;font-size: 13px;}
+
+.objetfit > img{width: 200px;	height: 200px; object-fit: none;}
+.pressname {height: 60px; overflow: hidden;}
+.presstext {height: 100px; overflow: hidden;}
  
 .content-box.box-6 .owl-carousel .item{} 
  
@@ -368,7 +372,7 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 /* ---------------------------------------------------------------------------- */
 .portfolio-box-inner {display: block;position: relative;margin: auto;overflow: hidden;height: 100%; width: 100%;}
 .portfolio-box{}
-.lua {width:350px;}
+.lua {width:500px;}
 .portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;color: #fff;-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;}
 
 .portfolio-box .portfolio-box-caption .portfolio-box-description {position: absolute;top: 50%;left: 40px;max-width: 80%;transform: translateY(-50%);}
@@ -469,4 +473,7 @@ a.btn:focus{outline: 0;}
   .product:hover .desc h3 a, .product:focus .desc h3 a {
     color: #d1c286;
   }
-  
+.resumen{border: 35px solid white;border-top: 0px solid white;} 
+.culoare{color: #42AB9E;} 
+.classWithM { margin:10px } 
+h5.recursos{font-size:22px;}
