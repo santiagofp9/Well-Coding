@@ -83,13 +83,6 @@ msgstr "Graduados"
 msgid "Contact"
 msgstr "Contacto"
 
-#: .\templates\index.html:122
-msgid "Keep Calm and Code"
-msgstr "Mantener la calma y el código"
-
-#: .\templates\index.html:123
-msgid "Web under construction"
-msgstr "Web bajo construcción"
 
 #: .\templates\index.html:146
 msgid "Problem Statement"
@@ -153,8 +146,8 @@ msgid "Impact"
 msgstr "Impacto"
 
 #: .\templates\index.html:322
-msgid "What Our Clients Say"
-msgstr "¿Qué dicen nuestros clientes?"
+msgid "Experiences"
+msgstr "Testimonios"
 
 #: .\templates\index.html:329 .\templates\index.html:336
 #: .\templates\index.html:343 .\templates\index.html:352
