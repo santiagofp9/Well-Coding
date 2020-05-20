@@ -86,9 +86,9 @@ class Alumni(models.Model):
 class Recurso(models.Model):
 	nombreRec = models.CharField(max_length=40)
 	archivo = models.FileField(null=True,upload_to='archivos/')
-	link = models.URLField(null=True)
+	link = models.URLField(null=True, blank=True)
 	programa = models.ForeignKey(Programa, on_delete=models.CASCADE, null=True)
-	imagen = models.ImageField(upload_to ='archivos/', null = True)
+	imagen = models.ImageField(upload_to ='recimg/', null = True)
 
 
 	class Meta:

@@ -84,7 +84,7 @@ class Networks(TemplateView):
     template_name = 'tomillo/networks.html'
 
 class Resources(ListView):
-    paginate_by = 9
+    paginate_by = 8
     model = Recurso
     template_name = 'tomillo/resources.html'
     context_object_name= 'res' 
