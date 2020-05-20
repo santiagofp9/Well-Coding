@@ -278,6 +278,10 @@ li:hover > .ocult li{display: block;}
 .box-content.box-6 .box-item .content h3 a{color: #333;}
 .box-content.box-6 .box-item .content h3 a:hover{color: #42AB9E;text-decoration: none;}
 .box-content.box-6 .box-item .content span{color: #a9a9a9;font-size: 13px;}
+
+.objetfit > img{width: 200px;	height: 200px; object-fit: none;}
+.pressname {height: 60px; overflow: hidden;}
+.presstext {height: 100px; overflow: hidden;}
  
 .content-box.box-6 .owl-carousel .item{} 
  

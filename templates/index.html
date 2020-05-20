@@ -90,13 +90,13 @@
 												{% get_language_info_list for LANGUAGES as languages %}
 												{% get_available_languages as LANGUAGES %}
 												{% for lang in LANGUAGES %}			
-												 	<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %} type=”submit”>
+												 	<option value="{{ lang.0 }}" {% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %} type="submit">
 														{{ lang.1 }} ({{ lang.0 }}) 
 													</option>
 												{% endfor %}
 															
 											</select>
-										<input class= "span3" type="submit" value="Go" class="btn btn-success" />					
+											<input class= "span3" type="submit" value="Go" class="btn btn-success" />					
 									</form>
 								</li>
                             </ul>
@@ -114,15 +114,7 @@
 						</div>
 					{% endif %}
 				</nav>
-
-									
-                <!-- Static Header -->
-                <div class="header-text">
-                    <div class="header-text-inner">
-                        <h1>{% trans "Keep Calm and Code" %}</h1>
-                        <p>{% trans "Web under construction" %} </p>
-                    </div>
-                </div>
+				
                 <!---Scroller--->
                 <div id="scroll-page-content">
                     <a href="#page-content" class="scroller">
@@ -359,11 +351,11 @@
 					<div id="owl-blog" class="owl-carousel">
 						{% for p in prensa %}
 						<div class="item">
-							<div class="box-item">
+							<div class="box-item objetfit">
 								<img src="{{ p.imagen.url }}" class="img-responsive" alt="#">
 								<div class="content">
-									<h3><a target="_blank" href="{{ p.link }}">{{p.titulo}}</a></h3>
-									<p>{{ p.descripcion }}</p>
+									<h3 class="pressname"><a target="_blank" href="{{ p.link }}">{{p.titulo}}</a></h3>
+									<p class="presstext">{{ p.descripcion }}</p>
 									<span>{{ p.fecha }}</span><br>
 									<a target="_blank" class="btn btn-skin" href="{{ p.link }}">Read More</a>
 								</div>
@@ -507,7 +499,7 @@
 				<li><a target="_blank" href="https://www.facebook.com/FundacionTomillo/">Facebook</a></li>
 				<li><a target="_blank" href="https://www.instagram.com/fundaciontomillo/">Instagram</a></li>
 				<li><a target="_blank" href="https://twitter.com/ftomillo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
-				<li><a target="_blank" href="{% url 'tomillo:press'  %}">{% trans "Press" %}</a></li>
+				<li><a href="{% url 'tomillo:press'  %}">{% trans "Press" %}</a></li>
 				<li><a href="{% url 'tomillo:legal'  %}">Legal</a></li>
 			</ul>
 		</div> 
