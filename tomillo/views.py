@@ -35,14 +35,7 @@ class Inicio(SuccessMessageMixin, FormView):
         context['testimonio'] = Publicacion.objects.all().order_by('-id')[:3]
         return context
 
-class Template(ListView):
-    template_name = 'tomillo/template.html'     
 
-    def get_context_data(self, **kwargs):
-        context = super(Template, self).get_context_data(**kwargs)
-        context['programas'] = Programa.objects.all()
-        context['promociones'] = Promocion.objects.all()
-        return context
 
 
 class Formacion(ListView):
@@ -58,6 +51,24 @@ class Formacion(ListView):
         context['promociones']=Promocion.objects.all() 
         context['formacionId']=Programa.objects.filter(id=parametro)
         return context
+
+
+class Edicion(ListView):
+    model = Promocion
+    template_name = 'tomillo/promocion.html'
+    context_object_name = 'promociones'
+    queryset = Promocion.objects.all()
+
+                
+    def get_context_data(self, **kwargs):
+        context=super(Edicion, self).get_context_data(**kwargs)
+        parametro = self.kwargs.get('id', None)
+        context['programas']=Programa.objects.all() 
+        context['promociones']=Promocion.objects.all()
+        context['edicion']=Promocion.objects.filter(id=parametro)
+        return context
+
+   
 
 class AboutUs(ListView):
     model = Programa

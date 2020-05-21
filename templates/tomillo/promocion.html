@@ -1,0 +1,70 @@
+{% extends 'tomillo/template.html' %}
+{% load static %}{% load i18n %}
+{% block content %}
+
+
+	<!-- Static Header -->
+			<div class="header-text">
+				<div class="header-text-inner">
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Promocion" %}</p>
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Promocion" %}</h1>
+				</div>
+			</div><!-- /header-text -->
+		</div>
+	</header>
+	<!-- /Section: intro -->
+	
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content">
+		
+		<div class="box-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+
+
+					<!-----------------Content-------------------->
+						<article>
+
+							{% for pro in edicion %}  
+							<div class="wrap-post"><!--Start Box-->
+								<div class="entry-header">
+									
+										<h2 class="text-uppercase font-weight-bold text-center"><a href="">{{pro.nombrePromo}}</a></h2>
+
+										
+											<span class="entry-meta">
+												<ul class="list-inline link">
+													<li><a href="#">{{pro.inicio}} - {{pro.fin}}</a></li>
+												</ul>
+											</span>
+								</div>
+								<div class="post-thumbnail-wrap">
+									<div class="portfolio-box zoom-effect">
+										<img src="{{ pro.imagen.url }}" class="img-responsive" alt="#">
+									</div>
+								</div>
+								<div class="entry-content">
+									<p> {{pro.programa}} </p> 
+									<p> {{pro.duracion}} </p> 
+									
+								</div>
+							</div>
+							{% endfor %}
+
+						</article>
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+{% endblock content %}	
+
+ 
+
+
+
+

@@ -23,9 +23,9 @@ urlpatterns = [
     path('legal/', Legal.as_view(), name = 'legal'),
     path('contact/', ContactUs.as_view(), name='contact'),
 
-    path('template/', Template.as_view(), name='template'),
+    
     path('formacion/<int:id>', Formacion.as_view(), name='formacion'),
-
+    path('edicion/<int:id>', Edicion.as_view(), name='edicion'),
 
     path('index/', Index, name='set_language'),
     path('i18n/', include('django.conf.urls.i18n')),

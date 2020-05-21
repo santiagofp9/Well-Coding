@@ -69,7 +69,7 @@
 															<ul class="dropdown-menu ocult">									 
 																{% for promo in promociones %}	 
 																	{% if prog.id == promo.programa.id %} 
-																		<li><a href="#">{{promo.nombrePromo}}</a></li> 
+																		<li><a href="{% url 'tomillo:edicion' promo.id %}">{{promo.nombrePromo}}</a></li> 
 																	{% endif %} 
 																{% endfor %} 
 															</ul> 
@@ -86,7 +86,7 @@
                                 <li>
                                 	<form action="{% url 'tomillo:set_language' %}" method="post" class="form-inline">{% csrf_token %} 	
 										<input name="next" type="hidden" value="{{ redirect_to }}" />											
-											<select name="language" style ="color:rgb(13, 150, 115); font-size:14px;height:30px">
+											<select name="language" style ="color:rgb(13, 150, 115); font-size:14px;height:30px" onchange="this.form.submit()">
 												
 												{% get_current_language as LANGUAGE_CODE %}
 												{% get_language_info_list for LANGUAGES as languages %}
@@ -98,7 +98,7 @@
 												{% endfor %}
 															
 											</select>
-											<input class= "span3" type="submit" value="Go" class="btn btn-success" />					
+															
 									</form>
 								</li>
                             </ul>

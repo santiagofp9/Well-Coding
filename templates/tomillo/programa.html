@@ -39,7 +39,7 @@
                                 <div class="entry-content">
                                     <p> {{k.descripcion}} </p> 
                                     <p> {{k.contenido}} </p>
-                                    <a class="btn btn-skin" href="#">{% trans "Inscribirse" %}</a>
+                                    <a class="btn btn-skin" href="{% url 'tomillo:contact' %}">{% trans "Inscribirse" %}</a>
                                 </div>            
                                  
                                 <!--<div class="post-thumbnail-wrap">
@@ -53,7 +53,7 @@
                                     </ul>
                                 </div>
                                 <div class="entry-content">
-                                    <p>´{% trans "Patrocinadores:" %} {{k.patrocinador}}  </p> 
+                                    <p>{% trans "Patrocinadores:" %} {{k.patrocinador}}  </p> 
                                 </div>
                             </div>
                             {% endfor %}
@@ -66,11 +66,5 @@
         </div>
     </div>
 
-    <script>
-        function Barrita() {
-            $('#tra').addClass('active');
-        }
-        window.onload = Barrita
-    </script>
-
+   
 {% endblock content %}
