@@ -71,7 +71,7 @@ class Alumni(models.Model):
 	nombre = models.CharField(max_length=25,blank=True,null=True)
 	apellido = models.CharField(max_length=25,blank=True,null=True)
 	foto = models.ImageField(null=True)
-	acerca_de = models.CharField(max_length=250,blank=True,null=True)
+	acerca_de = models.CharField(max_length=550,blank=True,null=True)
 	promocion = models.ForeignKey(Promocion, on_delete=models.CASCADE, null=True)
 	cv = models.FileField( null = True)
 	
