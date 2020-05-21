@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-17 01:04+0200\n"
+"POT-Creation-Date: 2020-05-21 08:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 msgid "Home"
 msgstr "Inicio"
 
-#: .\templates\index.html:57 .\templates\tomillo\aboutUs.html:8
-#: .\templates\tomillo\aboutUs.html:9 .\templates\tomillo\template.html:56
+#: .\templates\index.html:57 .\templates\tomillo\aboutUs.html:28
+#: .\templates\tomillo\aboutUs.html:29 .\templates\tomillo\template.html:56
 msgid "About Us"
 msgstr "Nosotros"
 
-#: .\templates\index.html:58 .\templates\index.html:441
-#: .\templates\tomillo\partners.html:9 .\templates\tomillo\template.html:57
+#: .\templates\index.html:58 .\templates\index.html:400
+#: .\templates\tomillo\partners.html:26 .\templates\tomillo\template.html:57
 msgid "Partners"
 msgstr "Aliados"
 
@@ -36,70 +36,124 @@ msgstr "Aliados"
 msgid "Training"
 msgstr "Formación"
 
-#: .\templates\index.html:63 .\templates\tomillo\template.html:62
-msgid "Tomillo F5"
-msgstr "Tomillo F5"
-
-#: .\templates\index.html:65 .\templates\tomillo\template.html:64
-msgid "Graduation 2020"
-msgstr "Graduación 2020"
-
-#: .\templates\index.html:68 .\templates\tomillo\template.html:67
-msgid "Cybersecurity"
-msgstr "Ciberseguridad"
-
-#: .\templates\index.html:69 .\templates\tomillo\template.html:68
-msgid "Formal Education"
-msgstr "Educación Formal"
-
-#: .\templates\index.html:71 .\templates\tomillo\template.html:70
-msgid "Electricity and Electronics"
-msgstr "Electricidad y Electrónica"
-
-#: .\templates\index.html:72 .\templates\tomillo\template.html:71
-msgid "Computing and Communication"
-msgstr "Computación y Comunicación"
-
-#: .\templates\index.html:73 .\templates\tomillo\template.html:72
-msgid "Administration"
-msgstr "Administración"
-
-#: .\templates\index.html:74 .\templates\tomillo\template.html:73
-msgid "Micro-computing and Networks"
-msgstr "Micro-computación y Redes"
-
-#: .\templates\index.html:81 .\templates\tomillo\resources.html:8
-#: .\templates\tomillo\resources.html:9 .\templates\tomillo\template.html:80
+#: .\templates\index.html:83 .\templates\tomillo\resources.html:25
+#: .\templates\tomillo\resources.html:26 .\templates\tomillo\template.html:82
 msgid "Resources"
 msgstr "Recursos"
 
-#: .\templates\index.html:82 .\templates\tomillo\alumni.html:9
-#: .\templates\tomillo\template.html:81
+#: .\templates\index.html:84 .\templates\tomillo\alumni.html:26
+#: .\templates\tomillo\template.html:83
 msgid "Alumni"
 msgstr "Graduados"
 
-#: .\templates\index.html:83 .\templates\tomillo\template.html:82
-#: .\templates\tomillo\template.html:138
+#: .\templates\index.html:85 .\templates\tomillo\template.html:84
+#: .\templates\tomillo\template.html:140
 msgid "Contact"
 msgstr "Contacto"
 
-
-#: .\templates\index.html:146
+#: .\templates\index.html:140
 msgid "Problem Statement"
 msgstr "Planteamiento del Problema"
 
-#: .\templates\index.html:155 .\templates\index.html:166
-#: .\templates\index.html:177 .\templates\index.html:188
-#: .\templates\index.html:199 .\templates\index.html:210
-#: .\templates\index.html:221 .\templates\index.html:232
-msgid "Project Name"
-msgstr "Nombre del Proyecto"
+#: .\templates\index.html:149
+msgid "Spain drop-out"
+msgstr ""
 
-#: .\templates\index.html:255
+#: .\templates\index.html:150
+#, python-format
+msgid ""
+"In Spain, one out of five young people drops-out from school and the "
+"unemployment rate for youngsters under 25 reaches 33,5%% (EPA 2018 III "
+"quarter)."
+msgstr ""
+
+#: .\templates\index.html:160
+msgid "Madrid drop-out"
+msgstr ""
+
+#: .\templates\index.html:161
+#, python-format
+msgid ""
+"In Madrid's districts, where Tomillo Foundation is settled, school failure "
+"reaches 40%% and unemployment rate is twice higher than any other city area."
+msgstr ""
+
+#: .\templates\index.html:171
+msgid "New generation"
+msgstr ""
+
+#: .\templates\index.html:172
+msgid ""
+"Disconnection among the interests of a digital generation with regard to "
+"schools/teachers and resources to match their needs and the lack of a free "
+"and quality training with this scope for youngsters at risk."
+msgstr ""
+
+#: .\templates\index.html:182
+msgid "Tech hiring increase"
+msgstr ""
+
+#: .\templates\index.html:183
+#, python-format
+msgid ""
+"In 2020, Spain will need 140.000 technological experts, even now, web "
+"development with Java is used by 9.000.000 coders, furthermore, a growth of "
+"31%% is expected."
+msgstr ""
+
+#: .\templates\index.html:193
+#, fuzzy
+#| msgid "Cybersecurity"
+msgid "Cybersecurity demand"
+msgstr "Ciberseguridad"
+
+#: .\templates\index.html:194
+#, python-format
+msgid ""
+"Cybersecurity is one of the main worries for companies; the sector grows in "
+"our country 12%% per year and employs 42.500 professionals (Telefonica "
+"Foundation Report)."
+msgstr ""
+
+#: .\templates\index.html:204
+msgid "Pay gap"
+msgstr ""
+
+#: .\templates\index.html:205
+#, python-format
+msgid ""
+"Based on data for 62 countries, the median hourly gender pay gap stood at "
+"12%%. The median gender pay gap exceeded 20%% in managerial and professional "
+"occupations, among workers in crafts and related trades."
+msgstr ""
+
+#: .\templates\index.html:215
+msgid "Soft skills"
+msgstr ""
+
+#: .\templates\index.html:216
+msgid ""
+"Due to high demand of these positions, companies´ requirements are more "
+"focused on profiles having the right hard and soft skills for overcoming "
+"challenges and be always updated than in university diplomas."
+msgstr ""
+
+#: .\templates\index.html:226
+msgid "Gender gap"
+msgstr ""
+
+#: .\templates\index.html:227
+msgid ""
+"While women represented 39 per cent of world employment, only 27 per cent of "
+"managerial positions in the world were occupied by women in 2018, up only "
+"marginally from 26 per cent in 2015."
+msgstr ""
+
+#: .\templates\index.html:249
 msgid "Training path"
 msgstr "Ruta de Formación"
 
-#: .\templates\index.html:256
+#: .\templates\index.html:250
 msgid ""
 "After Initial and Intermediate V.E.T. or professional training, the "
 "participant enrols further education or instruction. This career path is "
@@ -111,11 +165,11 @@ msgstr ""
 "esapoyado por actividades de orientación y sesiones de coaching con nuestros "
 "técnicospersonal."
 
-#: .\templates\index.html:268
+#: .\templates\index.html:262
 msgid "Access to employment"
 msgstr "Acceso a la empleabilidad"
 
-#: .\templates\index.html:269
+#: .\templates\index.html:263
 msgid ""
 "This positive exit is constant communication and involvement of companies "
 "through the project, practical experience in companies, job vacancies "
@@ -125,11 +179,11 @@ msgstr ""
 "empresas.a través del proyecto, experiencia práctica en empresas, ofertas de "
 "empleorecepción, consultoría gratuita e intermediación laboral, seguimiento."
 
-#: .\templates\index.html:281
+#: .\templates\index.html:275
 msgid "Entrepreneurship"
 msgstr "Emprendimiento"
 
-#: .\templates\index.html:282
+#: .\templates\index.html:276
 msgid ""
 "The participant is referred to our Entrepreneurship Department, part of "
 "Youth Business International, a net that supports underserved young "
@@ -141,21 +195,15 @@ msgstr ""
 "desatendidosEmprendedores para comenzar, crecer y mantener sus negocios, lo "
 "que les permiteCrear trabajos."
 
-#: .\templates\index.html:300
+#: .\templates\index.html:294
 msgid "Impact"
 msgstr "Impacto"
 
-#: .\templates\index.html:322
+#: .\templates\index.html:316
 msgid "Experiences"
 msgstr "Testimonios"
 
-#: .\templates\index.html:329 .\templates\index.html:336
-#: .\templates\index.html:343 .\templates\index.html:352
-#: .\templates\index.html:359 .\templates\index.html:366
-msgid "GREAT & FAST SERVICES"
-msgstr "SERVICIOS GRANDES Y RÁPIDOS"
-
-#: .\templates\index.html:379 .\templates\tomillo\aboutUs.html:42
+#: .\templates\index.html:338 .\templates\tomillo\aboutUs.html:62
 msgid ""
 "Contribute to the improvement of our society by helping people in vulnerable "
 "situations to better their life and their community."
@@ -163,63 +211,59 @@ msgstr ""
 "Contribuir a la mejora de nuestra sociedad ayudando a las personas en "
 "situación de vulnerabilidad para mejorar su vida y su comunidad."
 
-#: .\templates\index.html:380 .\templates\tomillo\aboutUs.html:25
+#: .\templates\index.html:339 .\templates\tomillo\aboutUs.html:45
 msgid "Tomillo Foundation"
 msgstr "Fundación Tomillo"
 
-#: .\templates\index.html:390
+#: .\templates\index.html:349
 msgid "Lastest from press"
 msgstr "Últimas noticias"
 
-#: .\templates\index.html:403 .\templates\tomillo\press.html:49
-msgid "Read More"
-msgstr "Leer Más"
-
-#: .\templates\index.html:418
+#: .\templates\index.html:377
 msgid "Sponsors"
 msgstr "Patrocinadores"
 
-#: .\templates\index.html:466 .\templates\tomillo\contact.html:36
-#: .\templates\tomillo\template.html:118
+#: .\templates\index.html:425 .\templates\tomillo\contact.html:53
+#: .\templates\tomillo\template.html:120
 msgid "Do we share the same values?"
 msgstr "¿Compartimos los mismos valores?"
 
-#: .\templates\index.html:466 .\templates\tomillo\template.html:118
+#: .\templates\index.html:425 .\templates\tomillo\template.html:120
 msgid "Do you want to be a part of our project?"
 msgstr "¿Quieres ser parte de nuestro proyecto?"
 
-#: .\templates\index.html:466 .\templates\tomillo\contact.html:36
-#: .\templates\tomillo\template.html:118
+#: .\templates\index.html:425 .\templates\tomillo\contact.html:53
+#: .\templates\tomillo\template.html:120
 msgid "Leave us a message."
 msgstr "Déjanos un mensaje"
 
-#: .\templates\index.html:490 .\templates\tomillo\contact.html:69
+#: .\templates\index.html:449 .\templates\tomillo\contact.html:86
 msgid "Submit"
 msgstr "Enviar"
 
-#: .\templates\index.html:504 .\templates\tomillo\template.html:152
+#: .\templates\index.html:463 .\templates\tomillo\template.html:154
 msgid "Location"
 msgstr "Ubicación"
 
-#: .\templates\index.html:505 .\templates\tomillo\contact.html:37
-#: .\templates\tomillo\template.html:153
+#: .\templates\index.html:464 .\templates\tomillo\contact.html:54
+#: .\templates\tomillo\template.html:155
 msgid "28041 Madrid Spain"
 msgstr "28041 Madrid España"
 
-#: .\templates\index.html:517 .\templates\tomillo\template.html:165
+#: .\templates\index.html:476 .\templates\tomillo\template.html:167
 msgid "Call"
 msgstr "Teléfono"
 
-#: .\templates\index.html:545 .\templates\tomillo\press.html:10
-#: .\templates\tomillo\press.html:11 .\templates\tomillo\template.html:193
+#: .\templates\index.html:504 .\templates\tomillo\press.html:27
+#: .\templates\tomillo\press.html:28 .\templates\tomillo\template.html:195
 msgid "Press"
 msgstr "Prensa"
 
-#: .\templates\tomillo\aboutUs.html:33
+#: .\templates\tomillo\aboutUs.html:53
 msgid "The Foundation aims to:"
 msgstr "La Fundación tiene como objetivo:"
 
-#: .\templates\tomillo\aboutUs.html:36
+#: .\templates\tomillo\aboutUs.html:56
 msgid ""
 "Promote, support or undertake activities dedicated to facilitate the social "
 "and occupational inclusion of those disadvantaged or at social risk, through "
@@ -231,7 +275,7 @@ msgstr ""
 "través de Programas de formación y/o recalificación, servicios de "
 "orientación y otrasiniciativas."
 
-#: .\templates\tomillo\aboutUs.html:37
+#: .\templates\tomillo\aboutUs.html:57
 msgid ""
 "Promote, support, or undertake pre-school, child, and youth education "
 "activities in socially disadvantaged environments, to improve access to "
@@ -241,7 +285,7 @@ msgstr ""
 "juvenilActividades en entornos socialmente desfavorecidos, para mejorar el "
 "acceso a Recursos educativos y prevenir el fracaso académico."
 
-#: .\templates\tomillo\aboutUs.html:38
+#: .\templates\tomillo\aboutUs.html:58
 msgid ""
 "Promote, support, or undertake other activities that, benefitting society, "
 "are directly or indirectly related to the aforementioned objectives, "
@@ -255,73 +299,135 @@ msgstr ""
 "social y económicorealidad, promoción de voluntarios, desarrollo de la "
 "economía social y Sostenibilidad"
 
-#: .\templates\tomillo\aboutUs.html:42
+#: .\templates\tomillo\aboutUs.html:62
 msgid "Tomillo Foundation Mission:"
 msgstr "Fundación Tomillo Misión:"
 
-#: .\templates\tomillo\aboutUs.html:43
+#: .\templates\tomillo\aboutUs.html:63
 msgid "Tomillo Foundacion main activities are:"
 msgstr "Las principales actividades de Foundación  Tomillo son: "
 
-#: .\templates\tomillo\aboutUs.html:46
+#: .\templates\tomillo\aboutUs.html:66
 msgid "School and Community"
 msgstr "Escuela y Comunidad"
 
-#: .\templates\tomillo\aboutUs.html:47
+#: .\templates\tomillo\aboutUs.html:67
 msgid "Training and Employment"
 msgstr "Formación y Empleabilidad"
 
-#: .\templates\tomillo\aboutUs.html:48
+#: .\templates\tomillo\aboutUs.html:68
 msgid "Studies and Social Innovation"
 msgstr "Estudios e Innovación Social"
 
-#: .\templates\tomillo\aboutUs.html:52
+#: .\templates\tomillo\aboutUs.html:72
 msgid "Website Address:"
 msgstr "Dirección Sitio Web"
 
-#: .\templates\tomillo\aboutUs.html:52
+#: .\templates\tomillo\aboutUs.html:72
 msgid "Tomillo Fundation"
 msgstr "Fundación Tomillo"
 
-#: .\templates\tomillo\alumni.html:8
+#: .\templates\tomillo\alumni.html:25
 msgid "Our Students' CV"
 msgstr "Nuestros Estudiantes"
 
-#: .\templates\tomillo\contact.html:8
+#: .\templates\tomillo\contact.html:25
 msgid "Leave us a message"
 msgstr "Déjanos un mensaje"
 
-#: .\templates\tomillo\contact.html:9
+#: .\templates\tomillo\contact.html:26
 msgid "Contact us"
 msgstr "Contáctanos"
 
-#: .\templates\tomillo\contact.html:35
+#: .\templates\tomillo\contact.html:52
 msgid "Contact Info"
 msgstr "Información de Contacto"
 
-#: .\templates\tomillo\contact.html:36
+#: .\templates\tomillo\contact.html:53
 msgid "Do you want to be a part of our project? "
 msgstr "¿Quieres ser parte de nuestro proyecto?"
 
-#: .\templates\tomillo\contact.html:43
+#: .\templates\tomillo\contact.html:60
 msgid "Contact Form"
 msgstr "Formulario de Contacto"
 
-#: .\templates\tomillo\partners.html:8
+#: .\templates\tomillo\partners.html:25
 msgid "Be Our Partner"
 msgstr "Sé nuestro socio"
 
-#: .\templates\tomillo\partners.html:26
+#: .\templates\tomillo\partners.html:43
 msgid "RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY"
 msgstr ""
 
-#: .\templates\tomillo\press.html:63
+#: .\templates\tomillo\press.html:66
+msgid "Read More"
+msgstr "Leer Más"
+
+#: .\templates\tomillo\press.html:80
 msgid "Next"
 msgstr "Siguiente"
 
-#: .\templates\tomillo\press.html:66
+#: .\templates\tomillo\press.html:83
 msgid "Back"
 msgstr "Atras"
+
+#: .\templates\tomillo\programa.html:10
+#, fuzzy
+#| msgid "Formal Education"
+msgid "Formación"
+msgstr "Educación Formal"
+
+#: .\templates\tomillo\programa.html:11
+msgid "FORMACIÓN"
+msgstr "TRAINING"
+
+#: .\templates\tomillo\programa.html:34
+msgid "Inicio:"
+msgstr "Start"
+
+#: .\templates\tomillo\programa.html:35
+msgid "Horas:"
+msgstr "Hours"
+
+#: .\templates\tomillo\programa.html:36
+msgid "Lugar:"
+msgstr "Place"
+
+#: .\templates\tomillo\programa.html:42
+msgid "Inscribirse"
+msgstr "Register"
+
+#: .\templates\tomillo\programa.html:52
+msgid "Requisitos:"
+msgstr "Requirement"
+
+#: .\templates\tomillo\programa.html:56
+msgid "Patrocinadores:"
+msgstr "Sponsors"
+
+#~ msgid "Tomillo F5"
+#~ msgstr "Tomillo F5"
+
+#~ msgid "Graduation 2020"
+#~ msgstr "Graduación 2020"
+
+#~ msgid "Electricity and Electronics"
+#~ msgstr "Electricidad y Electrónica"
+
+#~ msgid "Computing and Communication"
+#~ msgstr "Computación y Comunicación"
+
+#~ msgid "Administration"
+#~ msgstr "Administración"
+
+#~ msgid "Micro-computing and Networks"
+#~ msgstr "Micro-computación y Redes"
+
+#~ msgid "Project Name"
+#~ msgstr "Nombre del Proyecto"
+
+#~ msgid "GREAT & FAST SERVICES"
+#~ msgstr "SERVICIOS GRANDES Y RÁPIDOS"
 
 #~ msgid "English"
 #~ msgstr "Inglés"
