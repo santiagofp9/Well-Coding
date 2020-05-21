@@ -31,35 +31,18 @@
 	<!-- /Section: intro -->
 	
 	<!-- /////////////////////////////////////////Content -->
-	<div id="page-content">
-		
+	<div id="page-content">		
 		<div class="box-content">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<!-----------------Content-------------------->
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY</a></h2>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
-
 				<div class="row">
 					{% for a in alumni %}
 
                     <div class="col-md-4 text-center animate-box">
                         <div class="product">
-                            
                             <div class="product-grid" style="background-image:url(' ../../static{{ a.foto.url }}');">
                             	<div class="inner">
                                     <p>
-                                        <!-- Aquí va el link al CV, ya sea abriendo otra pestaña o descargando -->
-                                        <a href="{{a.cv}}" class="icon">CV</a>
-                                       
+										<a target ="_blank" class ="btn btn-skin" href= "../../static/iemeges/{{a.cv}}">CV</a>
                                     </p>
                                 </div>
 
@@ -72,14 +55,9 @@
                         </div>
                     </div>
                     {% endfor %}
-
-
-					
 				</div>
-				
 			</div>
 		</div>
-		
 	</div>
 
 	<script>
