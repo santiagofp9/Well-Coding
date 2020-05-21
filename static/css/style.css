@@ -164,6 +164,8 @@ body.sub-page .header-text p{ padding-top: 50px;}
 ul.dropdown-menu.ocult{padding: 0; margin-top: -5px;} 
 li:hover > .ocult li{display: block;}
 
+.trans{color: rgb(13, 150, 115); font-size: 14px; height: 35px; margin: 0; border: none;}
+
 @media  (min-width: 768px) {
     #menu ul.nav {float:right; margin-top: 5px;}
     #menu .dropdown:hover .dropdown-menu {display: block;}
@@ -476,6 +478,7 @@ a.btn:focus{outline: 0;}
   }
 
   .price{text-align: left;}
+  
 .resumen{border: 35px solid white;border-top: 0px solid white;} 
 .culoare{color: #42AB9E;} 
 .classWithM { margin:10px } 
