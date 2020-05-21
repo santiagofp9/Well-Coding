@@ -9,6 +9,8 @@ from django.utils import translation
 from django.utils.translation import gettext
 from django.contrib.messages.views import SuccessMessageMixin
 from django.http import HttpResponse
+from random import shuffle
+
 
 class Inicio(SuccessMessageMixin, FormView):
     form_class = ContactForm
@@ -155,13 +157,14 @@ class Resources(ListView):
 class Alumnis(ListView):
     model = Alumni
     template_name = 'tomillo/alumni.html'
-    context_object_name = 'alumni'
-    queryset = Alumni.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super(Alumnis, self).get_context_data(**kwargs)
         context['programas'] = Programa.objects.all()
         context['promociones'] = Promocion.objects.all()
+        lista = list(Alumni.objects.all())
+        shuffle(lista)
+        context['alumni'] = lista
         return context
     
 class Legal(TemplateView):
