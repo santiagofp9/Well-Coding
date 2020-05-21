@@ -30,9 +30,13 @@ class Inicio(SuccessMessageMixin, FormView):
         context['aliado'] = Aliado.objects.all()
         context['numero'] = Numero.objects.all()
         context['prensa'] = Prensa.objects.all()
+<<<<<<< HEAD
         context['testimonio'] = Publicacion.objects.all()[:3]
         context['programas'] = Programa.objects.all()
         context['promociones'] = Promocion.objects.all()
+=======
+        context['testimonio'] = Publicacion.objects.all().order_by('-id')[:3]
+>>>>>>> master
         return context
 
 class Template(ListView):
@@ -124,7 +128,7 @@ class Networks(TemplateView):
     template_name = 'tomillo/networks.html'
 
 class Resources(ListView):
-    paginate_by = 9
+    paginate_by = 8
     model = Recurso
     template_name = 'tomillo/resources.html'
     context_object_name= 'res' 

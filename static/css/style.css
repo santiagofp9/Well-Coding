@@ -373,7 +373,7 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 /* ---------------------------------------------------------------------------- */
 .portfolio-box-inner {display: block;position: relative;margin: auto;overflow: hidden;height: 100%; width: 100%;}
 .portfolio-box{}
-.lua {width:500px;}
+.lua {width:500px;height: 186.25px;}
 .portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;color: #fff;-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;}
 
 .portfolio-box .portfolio-box-caption .portfolio-box-description {position: absolute;top: 50%;left: 40px;max-width: 80%;transform: translateY(-50%);}
@@ -477,4 +477,4 @@ a.btn:focus{outline: 0;}
 .resumen{border: 35px solid white;border-top: 0px solid white;} 
 .culoare{color: #42AB9E;} 
 .classWithM { margin:10px } 
-h5.recursos{font-size:22px;}
+h6.recursos{text-align: center;}
