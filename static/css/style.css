@@ -474,6 +474,8 @@ a.btn:focus{outline: 0;}
   .product:hover .desc h3 a, .product:focus .desc h3 a {
     color: #d1c286;
   }
+
+  .price{text-align: left;}
 .resumen{border: 35px solid white;border-top: 0px solid white;} 
 .culoare{color: #42AB9E;} 
 .classWithM { margin:10px } 

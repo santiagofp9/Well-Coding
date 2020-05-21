@@ -5,8 +5,8 @@
 			<!-- Static Header -->
 			<div class="header-text">
 				<div class="header-text-inner">
-					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Be Our Partner" %}</p>
-					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Partners" %}</h1>
+					<p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Be our partner" %}</p>
+					<h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "Sponsors and Partners" %}</h1>
 				</div>
 			</div><!-- /header-text -->
 		</div>
@@ -17,18 +17,7 @@
 	<div id="page-content">
 		<div class="box-content">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<!-----------------Content-------------------->
-						<article>
-							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									<h2 class="entry-title"><a href="single.html">{% trans "RETRO GALLERY: FRAGMENTING PERSISTENT FLIGHT AND PATHOLOGY" %}</a></h2>
-								</div>
-							</div>
-						</article>
-					</div>
-				</div>
+
 
 				<div class="row">
 					{% for a in aliado %}
@@ -41,7 +30,7 @@
 							</div>
 							<div class="desc">
 								<h3><a target="_blank" href="{{ a.link }}">{{ a.nombre }}</a></h3>
-								<span class="price">{{ a.testimonio }}</span>
+								<p class="price">{{ a.testimonio }}</p>
 							</div>
                         </div>
                     </div>
