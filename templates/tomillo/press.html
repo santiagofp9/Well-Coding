@@ -48,7 +48,7 @@
 							<div class="wrap-post"><!--Start Box-->
 								<div class="entry-header">
 									
-										<h2 class="text-uppercase font-weight-bold text-center"><a href="">{{press.titulo}}</a></h2>
+										<h2 class="text-uppercase font-weight-bold text-center"><a>{{press.titulo}}</a></h2>
 										
 											<span class="entry-meta">
 												<ul class="list-inline link">
@@ -63,7 +63,7 @@
 								</div>
 								<div class="entry-content">
 									<p> {{press.descripcion}} </p> 
-									<a class="btn btn-skin" href="{{press.link}}">{% trans "Read More" %}</a>
+									<a class="btn btn-skin" href="{{press.link}}" target="_blank">{% trans "Read More" %}</a>
 								</div>
 							</div>
 							{% endfor %}
