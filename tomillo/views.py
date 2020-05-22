@@ -85,13 +85,14 @@ class AboutUs(ListView):
 class Partners(ListView):
     model = Aliado
     template_name = 'tomillo/partners.html'
-    context_object_name = 'aliado'
-    queryset = Aliado.objects.all()
 
     def get_context_data(self, **kwargs):
         context = super(Partners, self).get_context_data(**kwargs)
         context['programas'] = Programa.objects.all()
         context['promociones'] = Promocion.objects.all()
+        lista = list(Aliado.objects.all())
+        shuffle(lista)
+        context['aliado'] = lista
         return context
 
 class Blog(TemplateView):

@@ -477,7 +477,7 @@ a.btn:focus{outline: 0;}
     color: #d1c286;
   }
 
-  .price{text-align: left;}
+  .price{text-align: left; height: 240px;}
   
 .resumen{border: 35px solid white;border-top: 0px solid white;} 
 .culoare{color: #42AB9E;} 
