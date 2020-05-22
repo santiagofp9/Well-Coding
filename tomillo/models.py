@@ -43,6 +43,7 @@ class Programa(models.Model):
 	requisitos = models.CharField(max_length=300,null=True)
 	patrocinador = models.CharField(max_length=300,null=True)
 	imagen = models.ImageField(upload_to ='programa/', null = True)
+	logo =models.ManyToManyField(Aliado)
 
 	class Meta:
 		verbose_name = 'Programa'
@@ -60,6 +61,7 @@ class Promocion(models.Model):
     fin = models.DateField()
     programa = models.ForeignKey(Programa, on_delete=models.CASCADE,null=True)
     imagen = models.ImageField(upload_to ='edicion/', null = True)
+    
 
     class Meta:
         verbose_name = 'Promocion'

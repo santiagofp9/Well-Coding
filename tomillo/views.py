@@ -67,6 +67,7 @@ class Edicion(ListView):
         parametro = self.kwargs.get('id', None)
         context['programas']=Programa.objects.all() 
         context['promociones']=Promocion.objects.all()
+        context['press']=Prensa.objects.all()
         context['edicion']=Promocion.objects.filter(id=parametro)
         return context
 

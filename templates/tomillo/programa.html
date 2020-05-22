@@ -15,53 +15,72 @@
 </header>
 
 <div id="page-content">
-        
         <div class="box-content">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-
-
-                    <!-----------------Content-------------------->
+                        <!-----------------Content-------------------->
                         <article>
-                             {% for k in formacionId %}    
-                            <h1 class="text-center" style="color: black">{{k.nombrePrograma}} <i class="ti-hand-point-right"></i> 
-                            
                             <div class="wrap-post"><!--Start Box-->
+                                {% for k in formacionId %}
                                 <div class="entry-header">
-                                    
-                                        <div class="list-group">
-                                              <a class="list-group-item disabled">{% trans "Inicio:" %} {{k.inicio}}</a>
-                                              <a class="list-group-item disabled">{% trans "Horas:" %} {{k.horas}}</a>
-                                              <a class="list-group-item disabled">{% trans "Lugar:" %} {{k.lugar}}</a>
-                                        </div>
+                                    <h1 class="entry-title text-center text-uppercase">{{k.nombrePrograma}}</a></h2>
                                 </div>
-                                <div class="entry-content">
-                                    <p> {{k.descripcion}} </p> 
-                                    <p> {{k.contenido}} </p>
-                                    <a class="btn btn-skin" href="{% url 'tomillo:contact' %}">{% trans "Inscribirse" %}</a>
-                                </div>            
-                                 
-                                <!--<div class="post-thumbnail-wrap">
+                                <div class="post-thumbnail-wrap">
                                     <div class="portfolio-box zoom-effect">
-                                        <img src="{{ pro.imagen.url }}" class="img-responsive" alt="#">
+                                        <img src="{{k.imagen.url}}" class="img-responsive" alt="">
                                     </div>
-                                </div>-->
-                                <div class="entry-content">
-                                    <ul class="list-group">
-                                      <li class="list-group-item">{% trans "Requisitos:" %} {{k.requisitos}}</li>
-                                    </ul>
                                 </div>
                                 <div class="entry-content">
-                                    <p>{% trans "Patrocinadores:" %} {{k.patrocinador}}  </p> 
+                                    <p>{{k.descripcion}}</p>
+                                    <dl>
+                                        <dt>{% trans "Content:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.contenido}} </dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Requirements:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.requisitos}}</dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Starting Date:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.inicio}}</dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Hours:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.horas}}</dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Place:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.lugar}}</dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Place:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.lugar}}</dd>
+                                        {% endautoescape %}<br/>
+                                        <dt>{% trans "Sponsors:" %}</dt>
+                                        {% autoescape off%}
+                                        <dd>{{k.patrocinador}}</dd>
+                                        {% endautoescape %}<br/>
+                                    </dl> 
+                                    <br/>
                                 </div>
-                            </div>
-                            {% endfor %}
+                                <div class="row">
+                                    {% for p in k.logo.all %}<br>
+                                    <div class="col-md-6 text-center">
+                                        <div class="product"><br>                                            
+                                                <img src="{{p.logo.url}}" class="img-responsive" alt="#">                                            
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <a class="btn btn-skin btn-block" href="{% url 'tomillo:contact' %}">Register</a>
 
-                        </article>
-                
-                    </div>
-                </div>
+                            {% endfor %}
+                        </div>
+                    </article>
+                </div>               
+            </div>
             </div>
         </div>
     </div>

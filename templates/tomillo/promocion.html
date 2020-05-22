@@ -20,38 +20,51 @@
 		<div class="box-content">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-10 col-md-offset-1">
 
 
 					<!-----------------Content-------------------->
 						<article>
 
-							{% for pro in edicion %}  
+							  
+							
 							<div class="wrap-post"><!--Start Box-->
-								<div class="entry-header">
-									
-										<h2 class="text-uppercase font-weight-bold text-center"><a href="">{{pro.nombrePromo}}</a></h2>
-
-										
-											<span class="entry-meta">
-												<ul class="list-inline link">
-													<li><a href="#">{{pro.inicio}} - {{pro.fin}}</a></li>
+                                {% for pro in edicion %}
+                                <div class="entry-header">
+                                    <h1 class="entry-title text-center text-uppercase">{{pro.nombrePromo}}</a></h2>
+                                    	<span class="entry-meta">
+												<ul class="list-inline text-center">
+													<li>{{pro.inicio}} - {{pro.fin}}</li>
 												</ul>
-											</span>
-								</div>
-								<div class="post-thumbnail-wrap">
-									<div class="portfolio-box zoom-effect">
-										<img src="{{ pro.imagen.url }}" class="img-responsive" alt="#">
-									</div>
-								</div>
-								<div class="entry-content">
-									<p> {{pro.programa}} </p> 
-									<p> {{pro.duracion}} </p> 
+										</span>
+                                </div>
+                                <div class="post-thumbnail-wrap">
+                                    <div class="portfolio-box zoom-effect">
+                                        <img src="{{pro.imagen.url}}" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+                                <div class="entry-content">
+									<h6 class="entry-title recursos"><a href="">{{pro.programa}}</a></h6>
+									<h2 class="entry-title"><a href="">{{pro.duracion}} horas</a></h2>
 									
 								</div>
-							</div>
-							{% endfor %}
+								{% endfor %}
 
+								
+                                    {% for p in press %}
+                                    <div class=" col-8 col-sm-3"><!--Start Box1--> 
+										<div class="classWithM"> 
+											<div class="post-thumbnail-wrap">
+													<div class="portfolio-box zoom-effect">
+													<img src="../../static/iemeges/{{p.imagen}}" class= "lua" alt="#" >
+													</div>
+													
+											</div>
+										</div>
+									</div>
+
+						    {% endfor %}
+                        	</div>
 						</article>
 				
 					</div>
@@ -61,9 +74,9 @@
 		
 	</div>
 
+
 {% endblock content %}	
 
- 
 
 
 
