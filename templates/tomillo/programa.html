@@ -7,8 +7,8 @@
         <!-- Static Header -->
         <div class="header-text">
             <div class="header-text-inner">
-                <p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Formación" %}</p>
-                <h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "FORMACIÓN" %}</h1>
+                <p class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">{% trans "Trainings" %}</p>
+                <h1 class="wow fadeInLeft" data-wow-duration="1.5s">{% trans "TRAINING" %}</h1>
             </div>
         </div><!-- /header-text -->
     </div>
@@ -28,11 +28,11 @@
                                 </div>
                                 <div class="post-thumbnail-wrap">
                                     <div class="portfolio-box zoom-effect">
-                                        <img src="{{k.imagen.url}}" class="img-responsive" alt="">
+                                        <img src="{{k.imagen.url}}" class="img-responsive text-center" alt="">
                                     </div>
                                 </div>
                                 <div class="entry-content">
-                                    <p>{{k.descripcion}}</p>
+                                    <p class="text-justify">{{k.descripcion}}</p>
                                     <dl>
                                         <dt>{% trans "Content:" %}</dt>
                                         {% autoescape off%}
@@ -49,10 +49,6 @@
                                         <dt>{% trans "Hours:" %}</dt>
                                         {% autoescape off%}
                                         <dd>{{k.horas}}</dd>
-                                        {% endautoescape %}<br/>
-                                        <dt>{% trans "Place:" %}</dt>
-                                        {% autoescape off%}
-                                        <dd>{{k.lugar}}</dd>
                                         {% endautoescape %}<br/>
                                         <dt>{% trans "Place:" %}</dt>
                                         {% autoescape off%}

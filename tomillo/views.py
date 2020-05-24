@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, FormView, ListView
+from django.views.generic import TemplateView, FormView, ListView, CreateView
 from django.contrib.auth.models import User
 from .forms import ContactForm
 from django.core.mail import send_mail
@@ -38,8 +38,6 @@ class Inicio(SuccessMessageMixin, FormView):
         return context
 
 
-
-
 class Formacion(ListView):
     model = Programa
     template_name = 'tomillo/programa.html'
@@ -67,11 +65,10 @@ class Edicion(ListView):
         parametro = self.kwargs.get('id', None)
         context['programas']=Programa.objects.all() 
         context['promociones']=Promocion.objects.all()
-        context['press']=Prensa.objects.all()
         context['edicion']=Promocion.objects.filter(id=parametro)
         return context
-
-   
+        
+    
 
 class AboutUs(ListView):
     model = Programa
@@ -96,8 +93,7 @@ class Partners(ListView):
         context['aliado'] = lista
         return context
 
-class Blog(TemplateView):
-    template_name = 'tomillo/archive.html'
+
 
 class ContactUs(SuccessMessageMixin, FormView):
     form_class = ContactForm
@@ -119,29 +115,6 @@ class ContactUs(SuccessMessageMixin, FormView):
         context['promociones'] = Promocion.objects.all()
         return context
             
-class TomilloF5(TemplateView):
-    template_name = 'tomillo/f5.html'
-
-class Promo2020(TemplateView):
-    template_name = 'tomillo/promo2020.html'
-
-class Cybersecurity(TemplateView):
-    template_name = 'tomillo/cyber.html'
-
-class FormalEducation(TemplateView):
-    template_name = 'tomillo/formalEducation.html'
-
-class EleEco(TemplateView):
-    template_name = 'tomillo/ele_eco.html'
-
-class Adm(TemplateView):
-    template_name = 'tomillo/adm.html'
-
-class Computing(TemplateView):
-    template_name = 'tomillo/computing.html'
-
-class Networks(TemplateView):
-    template_name = 'tomillo/networks.html'
 
 class Resources(ListView):
     paginate_by = 8

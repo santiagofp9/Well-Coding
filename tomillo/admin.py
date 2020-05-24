@@ -4,8 +4,6 @@ from .models import *
 from translations.admin import TranslatableAdmin, TranslationInline
 
 
-# Register your models here.
-
 admin.site.register(Numero)
 admin.site.register(Aliado)
 admin.site.register(Programa)
@@ -18,3 +16,4 @@ admin.site.register(Recurso)
 
 class ContinentAdmin(TranslatableAdmin):
     inlines = [TranslationInline]
+

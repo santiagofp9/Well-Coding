@@ -52,7 +52,31 @@ class Programa(models.Model):
 
 	def __str__(self):
 		return str(self.nombrePrograma)
-		
+
+
+
+class Prensa(models.Model):
+	fecha = models.DateField(blank=True, null=True)
+	link = models.URLField(max_length=500)
+	titulo = models.CharField(max_length=100,blank=True, null=True)
+	descripcion = models.CharField(max_length=300,blank=True, null=True)
+	imagen = models.ImageField(upload_to = 'prensa/', default = 'pic_folder/None/partner-3.png')
+	order = models.IntegerField(blank=True, null=True)
+	body = models.TextField(blank=True, null=True)
+	slug = models.SlugField(max_length=200,default='', blank=True)
+	
+	class Meta:
+		verbose_name = 'Prensa'
+		verbose_name_plural = 'Prensa links'
+		ordering = ["-fecha"] 
+
+	def save(self):
+		self.slug = slugify(self.titulo)
+		super(Prensa, self).save()
+
+	def __str__(self):
+		return str(self.order) + " " + str(self.titulo)+ " " + str(self.descripcion) 
+
 
 class Promocion(models.Model):
     nombrePromo = models.CharField(max_length=40)
@@ -61,7 +85,7 @@ class Promocion(models.Model):
     fin = models.DateField()
     programa = models.ForeignKey(Programa, on_delete=models.CASCADE,null=True)
     imagen = models.ImageField(upload_to ='edicion/', null = True)
-    
+    foto = models.ManyToManyField(Prensa)
 
     class Meta:
         verbose_name = 'Promocion'
@@ -122,29 +146,4 @@ class Publicacion(models.Model):
 	def __str__(self):
 
 		return str(self.titulo) + " " + str(self.fecha) 
-
-
-class Prensa(models.Model):
-	fecha = models.DateField(blank=True, null=True)
-	link = models.URLField(max_length=500)
-	titulo = models.CharField(max_length=100,blank=True, null=True)
-	descripcion = models.CharField(max_length=300,blank=True, null=True)
-	imagen = models.ImageField(upload_to = 'prensa/', default = 'pic_folder/None/partner-3.png')
-	order = models.IntegerField(blank=True, null=True)
-	body = models.TextField(blank=True, null=True)
-	slug = models.SlugField(max_length=200,default='', blank=True)
-	
-	class Meta:
-		verbose_name = 'Prensa'
-		verbose_name_plural = 'Prensa links'
-		ordering = ["-fecha"] 
-
-	def save(self):
-		self.slug = slugify(self.titulo)
-		super(Prensa, self).save()
-
-	def __str__(self):
-		return str(self.order) + " " + str(self.titulo)+ " " + str(self.descripcion) 
-
-
 
