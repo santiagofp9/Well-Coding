@@ -375,7 +375,9 @@ footer .copyright{padding: 15px 0;font-size: 16px;}
 /* ---------------------------------------------------------------------------- */
 .portfolio-box-inner {display: block;position: relative;margin: auto;overflow: hidden;height: 100%; width: 100%;}
 .portfolio-box{}
-.lua {width:500px;height: 186.25px;}
+.lua {height: 186.25px; object-fit: contain; width:100%; height: 100%; margin: auto; }
+.luacard{height: 186.25px; width: 186.25px; display: flex;}
+.luatitle{height:50px;width: 186.25px;margin-bottom: 20px;}
 .portfolio-box .portfolio-box-caption {display: block;position: absolute;bottom: 0;width: 100%;height: 100%;color: #fff;-webkit-transition: all .35s;-moz-transition: all .35s;transition: all .35s;}
 
 .portfolio-box .portfolio-box-caption .portfolio-box-description {position: absolute;top: 50%;left: 40px;max-width: 80%;transform: translateY(-50%);}
@@ -483,3 +485,5 @@ a.btn:focus{outline: 0;}
 .culoare{color: #42AB9E;} 
 .classWithM { margin:10px } 
 h6.recursos{text-align: center;}
+.recdescargas{display:flex;padding: 9px 0px;}
+article .entry-content p.recp{margin:auto;text-align: center; color:white;}
