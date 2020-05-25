@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-24 22:49+0200\n"
+"POT-Creation-Date: 2020-05-25 08:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,47 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\templates\index.html:56 .\templates\tomillo\template.html:58
+#: templates/index.html:56 templates/tomillo/template.html:58
 msgid "Home"
 msgstr "Inicio"
 
-#: .\templates\index.html:57 .\templates\tomillo\template.html:59
+#: templates/index.html:57 templates/tomillo/template.html:59
 msgid "About Us"
 msgstr "Nosotros"
 
-#: .\templates\index.html:58 .\templates\index.html:400
-#: .\templates\tomillo\template.html:60
+#: templates/index.html:58 templates/index.html:400
+#: templates/tomillo/template.html:60
 msgid "Partners"
 msgstr "Aliados"
 
-#: .\templates\index.html:59 .\templates\tomillo\template.html:61
+#: templates/index.html:59 templates/tomillo/template.html:61
 msgid "Training"
 msgstr "Formación"
 
-#: .\templates\index.html:83 .\templates\tomillo\resources.html:10
-#: .\templates\tomillo\template.html:85
+#: templates/index.html:83 templates/tomillo/resources.html:10
+#: templates/tomillo/template.html:85
 msgid "Resources"
 msgstr "Recursos"
 
-#: .\templates\index.html:84 .\templates\tomillo\alumni.html:10
-#: .\templates\tomillo\template.html:86
+#: templates/index.html:84 templates/tomillo/alumni.html:10
+#: templates/tomillo/template.html:86
 msgid "Alumni"
 msgstr "Graduados"
 
-#: .\templates\index.html:85 .\templates\tomillo\template.html:87
-#: .\templates\tomillo\template.html:143
+#: templates/index.html:85 templates/tomillo/template.html:87
+#: templates/tomillo/template.html:143
 msgid "Contact"
 msgstr "Contacto"
 
-#: .\templates\index.html:140
+#: templates/index.html:140
 msgid "Problem Statement"
-msgstr ""
+msgstr "Antecedentes"
 
-#: .\templates\index.html:149
+#: templates/index.html:149
 msgid "Spain drop-out"
 msgstr ""
 
-#: .\templates\index.html:150
+#: templates/index.html:150
 #, python-format
 msgid ""
 "In Spain, one out of five young people drops-out from school and the "
@@ -66,33 +66,33 @@ msgid ""
 "quarter)."
 msgstr ""
 
-#: .\templates\index.html:160
+#: templates/index.html:160
 msgid "Madrid drop-out"
 msgstr ""
 
-#: .\templates\index.html:161
+#: templates/index.html:161
 #, python-format
 msgid ""
 "In Madrid's districts, where Tomillo Foundation is settled, school failure "
 "reaches 40%% and unemployment rate is twice higher than any other city area."
 msgstr ""
 
-#: .\templates\index.html:171
+#: templates/index.html:171
 msgid "New generation"
 msgstr ""
 
-#: .\templates\index.html:172
+#: templates/index.html:172
 msgid ""
 "Disconnection among the interests of a digital generation with regard to "
 "schools/teachers and resources to match their needs and the lack of a free "
 "and quality training with this scope for youngsters at risk."
 msgstr ""
 
-#: .\templates\index.html:182
+#: templates/index.html:182
 msgid "Tech hiring increase"
 msgstr ""
 
-#: .\templates\index.html:183
+#: templates/index.html:183
 #, python-format
 msgid ""
 "In 2020, Spain will need 140.000 technological experts, even now, web "
@@ -100,11 +100,11 @@ msgid ""
 "31%% is expected."
 msgstr ""
 
-#: .\templates\index.html:193
+#: templates/index.html:193
 msgid "Cybersecurity demand"
 msgstr "Ciberseguridad"
 
-#: .\templates\index.html:194
+#: templates/index.html:194
 #, python-format
 msgid ""
 "Cybersecurity is one of the main worries for companies; the sector grows in "
@@ -112,11 +112,11 @@ msgid ""
 "Foundation Report)."
 msgstr ""
 
-#: .\templates\index.html:204
+#: templates/index.html:204
 msgid "Pay gap"
 msgstr ""
 
-#: .\templates\index.html:205
+#: templates/index.html:205
 #, python-format
 msgid ""
 "Based on data for 62 countries, the median hourly gender pay gap stood at "
@@ -124,33 +124,33 @@ msgid ""
 "occupations, among workers in crafts and related trades."
 msgstr ""
 
-#: .\templates\index.html:215
+#: templates/index.html:215
 msgid "Soft skills"
 msgstr ""
 
-#: .\templates\index.html:216
+#: templates/index.html:216
 msgid ""
 "Due to high demand of these positions, companies´ requirements are more "
 "focused on profiles having the right hard and soft skills for overcoming "
 "challenges and be always updated than in university diplomas."
 msgstr ""
 
-#: .\templates\index.html:226
+#: templates/index.html:226
 msgid "Gender gap"
 msgstr ""
 
-#: .\templates\index.html:227
+#: templates/index.html:227
 msgid ""
 "While women represented 39 per cent of world employment, only 27 per cent of "
 "managerial positions in the world were occupied by women in 2018, up only "
 "marginally from 26 per cent in 2015."
 msgstr ""
 
-#: .\templates\index.html:249
+#: templates/index.html:249
 msgid "Training path"
 msgstr ""
 
-#: .\templates\index.html:250
+#: templates/index.html:250
 msgid ""
 "After Initial and Intermediate V.E.T. or professional training, the "
 "participant enrols further education or instruction. This career path is "
@@ -158,22 +158,22 @@ msgid ""
 "staff."
 msgstr ""
 
-#: .\templates\index.html:262
+#: templates/index.html:262
 msgid "Access to employment"
 msgstr ""
 
-#: .\templates\index.html:263
+#: templates/index.html:263
 msgid ""
 "This positive exit is constant communication and involvement of companies "
 "through the project, practical experience in companies, job vacancies "
 "reception, free consultancy and labour intermediation, follow up."
 msgstr ""
 
-#: .\templates\index.html:275
+#: templates/index.html:275
 msgid "Entrepreneurship"
 msgstr ""
 
-#: .\templates\index.html:276
+#: templates/index.html:276
 msgid ""
 "The participant is referred to our Entrepreneurship Department, part of "
 "Youth Business International, a net that supports underserved young "
@@ -181,77 +181,77 @@ msgid ""
 "create jobs."
 msgstr ""
 
-#: .\templates\index.html:294
+#: templates/index.html:294
 msgid "Impact"
 msgstr "Impacto"
 
-#: .\templates\index.html:316
+#: templates/index.html:316
 msgid "Experiences"
 msgstr "Testimonios"
 
-#: .\templates\index.html:338 .\templates\tomillo\aboutUs.html:42
+#: templates/index.html:338 templates/tomillo/aboutUs.html:42
 msgid ""
 "Contribute to the improvement of our society by helping people in vulnerable "
 "situations to better their life and their community."
 msgstr ""
 
-#: .\templates\index.html:339 .\templates\tomillo\aboutUs.html:12
+#: templates/index.html:339 templates/tomillo/aboutUs.html:12
 msgid "Tomillo Foundation"
 msgstr "Fundación Tomillo"
 
-#: .\templates\index.html:349
+#: templates/index.html:349
 msgid "Lastest from press"
 msgstr "Últimas noticias"
 
-#: .\templates\index.html:377
+#: templates/index.html:377
 msgid "Sponsors"
 msgstr "Patrocinadores"
 
-#: .\templates\index.html:425 .\templates\tomillo\contact.html:53
-#: .\templates\tomillo\template.html:123
+#: templates/index.html:425 templates/tomillo/contact.html:53
+#: templates/tomillo/template.html:123
 msgid "Do we share the same values?"
 msgstr ""
 
-#: .\templates\index.html:425 .\templates\tomillo\template.html:123
+#: templates/index.html:425 templates/tomillo/template.html:123
 msgid "Do you want to be a part of our project?"
 msgstr ""
 
-#: .\templates\index.html:425 .\templates\tomillo\contact.html:53
-#: .\templates\tomillo\template.html:123
+#: templates/index.html:425 templates/tomillo/contact.html:53
+#: templates/tomillo/template.html:123
 msgid "Leave us a message."
 msgstr ""
 
-#: .\templates\index.html:449 .\templates\tomillo\contact.html:86
+#: templates/index.html:449 templates/tomillo/contact.html:86
 msgid "Submit"
 msgstr ""
 
-#: .\templates\index.html:463 .\templates\tomillo\template.html:157
+#: templates/index.html:463 templates/tomillo/template.html:157
 msgid "Location"
 msgstr ""
 
-#: .\templates\index.html:464 .\templates\tomillo\contact.html:54
-#: .\templates\tomillo\template.html:158
+#: templates/index.html:464 templates/tomillo/contact.html:54
+#: templates/tomillo/template.html:158
 msgid "28041 Madrid Spain"
 msgstr ""
 
-#: .\templates\index.html:476 .\templates\tomillo\template.html:170
+#: templates/index.html:476 templates/tomillo/template.html:170
 msgid "Call"
 msgstr ""
 
-#: .\templates\index.html:504 .\templates\tomillo\press.html:11
-#: .\templates\tomillo\template.html:198
+#: templates/index.html:504 templates/tomillo/press.html:11
+#: templates/tomillo/template.html:198
 msgid "Press"
 msgstr "Prensa"
 
-#: .\templates\tomillo\aboutUs.html:11
+#: templates/tomillo/aboutUs.html:11
 msgid "Meet us now"
 msgstr "Conózcanos ahora"
 
-#: .\templates\tomillo\aboutUs.html:33
+#: templates/tomillo/aboutUs.html:33
 msgid "The Foundation aims to:"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:36
+#: templates/tomillo/aboutUs.html:36
 msgid ""
 "Promote, support or undertake activities dedicated to facilitate the social "
 "and occupational inclusion of those disadvantaged or at social risk, through "
@@ -259,14 +259,14 @@ msgid ""
 "initiatives."
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:37
+#: templates/tomillo/aboutUs.html:37
 msgid ""
 "Promote, support, or undertake pre-school, child, and youth education "
 "activities in socially disadvantaged environments, to improve access to "
 "educational resources and prevent academic failure."
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:38
+#: templates/tomillo/aboutUs.html:38
 msgid ""
 "Promote, support, or undertake other activities that, benefitting society, "
 "are directly or indirectly related to the aforementioned objectives, "
@@ -275,127 +275,127 @@ msgid ""
 "sustainability"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:42
+#: templates/tomillo/aboutUs.html:42
 msgid "Tomillo Foundation Mission:"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:43
+#: templates/tomillo/aboutUs.html:43
 msgid "Tomillo Foundacion main activities are:"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:46
+#: templates/tomillo/aboutUs.html:46
 msgid "School and Community"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:47
+#: templates/tomillo/aboutUs.html:47
 msgid "Training and Employment"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:48
+#: templates/tomillo/aboutUs.html:48
 msgid "Studies and Social Innovation"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:52
+#: templates/tomillo/aboutUs.html:52
 msgid "Website Address:"
 msgstr ""
 
-#: .\templates\tomillo\aboutUs.html:52
+#: templates/tomillo/aboutUs.html:52
 msgid "Tomillo Fundation"
 msgstr "Fundación Tomillo"
 
-#: .\templates\tomillo\alumni.html:9
+#: templates/tomillo/alumni.html:9
 msgid "Our Students' CV"
 msgstr "Nuestros Estudiantes"
 
-#: .\templates\tomillo\contact.html:25
+#: templates/tomillo/contact.html:25
 msgid "Leave us a message"
 msgstr "Déjanos un mensaje"
 
-#: .\templates\tomillo\contact.html:26
+#: templates/tomillo/contact.html:26
 msgid "Contact us"
 msgstr "Contáctanos"
 
-#: .\templates\tomillo\contact.html:52
+#: templates/tomillo/contact.html:52
 msgid "Contact Info"
 msgstr ""
 
-#: .\templates\tomillo\contact.html:53
+#: templates/tomillo/contact.html:53
 msgid "Do you want to be a part of our project? "
 msgstr ""
 
-#: .\templates\tomillo\contact.html:60
+#: templates/tomillo/contact.html:60
 msgid "Contact Form"
 msgstr ""
 
-#: .\templates\tomillo\legal.html:10
+#: templates/tomillo/legal.html:10
 msgid "Terms and Conditions"
 msgstr "Términos y condiciones"
 
-#: .\templates\tomillo\legal.html:11
+#: templates/tomillo/legal.html:11
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
-#: .\templates\tomillo\partners.html:25
+#: templates/tomillo/partners.html:25
 msgid "Be our partner"
 msgstr "Sea nuestro aliado"
 
-#: .\templates\tomillo\partners.html:26
+#: templates/tomillo/partners.html:26
 msgid "Sponsors and Partners"
 msgstr "Patrocinadores y Aliados"
 
-#: .\templates\tomillo\press.html:10
+#: templates/tomillo/press.html:10
 msgid "Articles about our project"
 msgstr "Artículos sobre nuestro proyecto"
 
-#: .\templates\tomillo\press.html:49
+#: templates/tomillo/press.html:49
 msgid "Read More"
 msgstr "Leer Más"
 
-#: .\templates\tomillo\press.html:63 .\templates\tomillo\resources.html:58
+#: templates/tomillo/press.html:63 templates/tomillo/resources.html:63
 msgid "Next"
 msgstr "Siguiente"
 
-#: .\templates\tomillo\press.html:66 .\templates\tomillo\resources.html:54
+#: templates/tomillo/press.html:66 templates/tomillo/resources.html:59
 msgid "Back"
 msgstr "Atras"
 
-#: .\templates\tomillo\programa.html:10
+#: templates/tomillo/programa.html:10
 msgid "Trainings"
 msgstr "Formaciones"
 
-#: .\templates\tomillo\programa.html:11
+#: templates/tomillo/programa.html:11
 msgid "TRAINING"
 msgstr "FORMACIÓN"
 
-#: .\templates\tomillo\programa.html:37
+#: templates/tomillo/programa.html:37
 msgid "Content:"
 msgstr "Contenido"
 
-#: .\templates\tomillo\programa.html:41
+#: templates/tomillo/programa.html:41
 msgid "Requirements:"
 msgstr "Requisitos"
 
-#: .\templates\tomillo\programa.html:45
+#: templates/tomillo/programa.html:45
 msgid "Starting Date:"
 msgstr "Fecha de Inicio"
 
-#: .\templates\tomillo\programa.html:49
+#: templates/tomillo/programa.html:49
 msgid "Hours:"
 msgstr "Horas"
 
-#: .\templates\tomillo\programa.html:53
+#: templates/tomillo/programa.html:53
 msgid "Place:"
 msgstr "Lugar"
 
-#: .\templates\tomillo\programa.html:57
+#: templates/tomillo/programa.html:57
 msgid "Sponsors:"
 msgstr "Patrocinadores"
 
-#: .\templates\tomillo\promocion.html:9 .\templates\tomillo\promocion.html:10
+#: templates/tomillo/promocion.html:9 templates/tomillo/promocion.html:10
 msgid "Promotion"
 msgstr "Promoción"
 
-#: .\templates\tomillo\resources.html:9
+#: templates/tomillo/resources.html:9
 msgid "Learn with us"
 msgstr "Aprenda con nosotros"
 
